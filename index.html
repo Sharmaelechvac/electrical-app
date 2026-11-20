@@ -3,34 +3,35 @@
 <head>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"/>
-<meta name="theme-color" content="#264387">
-<meta name="color-scheme" content="light">
-<script>(function(){try{if(localStorage.getItem("sk-scheme")==="dark"){var d=document.documentElement;d.setAttribute("data-scheme","dark");var m=document.querySelector('meta[name="theme-color"]');if(m)m.content=d.getAttribute("data-theme")==="track"?"#1C1C1E":"#1a2f61"}}catch(e){}})()</script>
+<meta name="color-scheme" content="light dark"/>
 <link rel="icon" href="data:,"/>
 <title>Electrical Picker — Sharma Electric &amp; HVAC</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#0b1e3a;--navy2:#07142a;--red:#d22630;--bg:#f4f6f9;--surface:#fff;--surface2:#eef1f5;--ink:#101d33;--muted:#5b6b84;--line:#dde3ea;--good:#16794a;--radius:16px;--shadow:0 10px 30px rgba(11,30,58,.13);--bar-h:64px}
-[data-scheme="dark"]{--bg:#0a1526;--surface:#12233f;--surface2:#182c4d;--ink:#eef2f8;--muted:#a9b8cf;--line:#243a5e;--shadow:0 8px 24px rgba(0,0,0,.4)}
+:root{--navy:#0b1e3a;--navy2:#07142a;--orange:#e86a10;--orange2:#f07d1f;--gold:#f5b841;--red:#d22630;--bg:#f4f6f9;--surface:#fff;--surface2:#eef1f5;--ink:#101d33;--muted:#5b6b84;--line:#dde3ea;--good:#16794a;--radius:16px;--shadow:0 10px 30px rgba(11,30,58,.13);--bar-h:64px}
+@media(prefers-color-scheme:dark){:root{--bg:#0a1526;--surface:#12233f;--surface2:#182c4d;--ink:#eef2f8;--muted:#a9b8cf;--line:#243a5e;--shadow:0 8px 24px rgba(0,0,0,.4)}}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font-family:var(--sk-font);background:var(--bg);color:var(--ink);line-height:1.45;padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom) + 12px)}
-h1,h2,h3,.cond{font-family:var(--sk-font);letter-spacing:.01em}
-a{color:var(--sk-tint)}button{font-family:var(--sk-font)}
-.topbar{background:#fff;color:var(--navy);padding:10px 16px;display:flex;gap:12px;align-items:center;justify-content:space-between;border-bottom:3px solid var(--sk-brand)}
+body{margin:0;font-family:"Barlow",system-ui,sans-serif;background:var(--bg);color:var(--ink);line-height:1.45;padding-bottom:calc(var(--bar-h) + env(safe-area-inset-bottom) + 12px)}
+h1,h2,h3,.cond{font-family:"Barlow Condensed","Barlow",sans-serif;letter-spacing:.01em}
+a{color:var(--orange)}button{font-family:"Barlow"}
+.topbar{background:#fff;color:var(--navy);padding:10px 16px;display:flex;gap:12px;align-items:center;justify-content:space-between;border-bottom:3px solid var(--orange)}
 .topbar .logo{height:68px;width:auto;display:block;max-width:52vw}
 @media(min-width:720px){.topbar .logo{height:84px}}
 .topbar .links{font-size:14.5px;display:flex;gap:10px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
 .topbar a{color:var(--navy);text-decoration:none;font-weight:700;white-space:nowrap}
-.topbar a.callbtn{background:var(--sk-brand);color:#fff;padding:10px 16px;border-radius:999px;font-size:15px}
-.topbar a.callbtn:hover{background:var(--sk-brand-press)}
-.hero{background:linear-gradient(165deg,var(--navy) 55%,var(--navy2));color:#fff;position:relative;overflow:hidden;border-bottom:4px solid var(--sk-brand)}
+.topbar a.callbtn{background:var(--orange);color:#fff;padding:10px 16px;border-radius:999px;font-size:15px}
+.topbar a.callbtn:hover{background:var(--orange2)}
+.hero{background:linear-gradient(165deg,var(--navy) 55%,var(--navy2));color:#fff;position:relative;overflow:hidden;border-bottom:4px solid var(--orange)}
 .hero .inner{position:relative;max-width:880px;margin:0 auto;padding:34px 16px 30px;text-align:center}
 @media(min-width:820px){.hero .inner{padding:48px 20px 40px}}
 .hero .logo-card{display:inline-block;background:#fff;border-radius:18px;padding:14px 22px 10px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
 .hero .logo-card img{height:104px;width:auto;display:block;max-width:78vw}
 @media(min-width:720px){.hero .logo-card img{height:132px}}
 .hero h1{font-size:clamp(46px,10vw,84px);line-height:.92;margin:24px 0 0;text-transform:uppercase;font-weight:700}
-.hero h1 em{color:var(--sk-tint);font-style:normal}
-.hero .creed{font-family:var(--sk-font);font-size:clamp(19px,3.4vw,25px);font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--sk-tint);margin:12px 0 0}
+.hero h1 em{color:var(--orange2);font-style:normal}
+.hero .creed{font-family:"Barlow Condensed";font-size:clamp(19px,3.4vw,25px);font-weight:600;text-transform:uppercase;letter-spacing:.14em;color:var(--gold);margin:12px 0 0}
 .hero p.lede{margin:14px auto 0;font-size:17px;color:#dbe6f4;max-width:560px;line-height:1.55}
 .hero .cta-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:22px;justify-content:center}
 .hero .cta-row .btn{padding:14px 24px;font-size:16.5px}
@@ -38,45 +39,45 @@ a{color:var(--sk-tint)}button{font-family:var(--sk-font)}
 .btn-ghost:hover{border-color:#fff}
 .hero .licenses{margin:16px 0 0;font-size:13.5px;font-weight:700;letter-spacing:.05em;color:#a9bcd6;text-transform:uppercase}
 .hero .specs{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin:24px auto 0;max-width:640px;text-align:left}
-.hero .spec{border-top:3px solid var(--sk-brand);padding-top:7px}
-.hero .spec b{display:block;font-family:var(--sk-font);font-size:19px;line-height:1.05;text-transform:uppercase}
-.hero .spec span{font-size:13px;color:#a9bcd6;line-height:1.3;display:block;margin-top:2px}
+.hero .spec{border-top:3px solid var(--orange);padding-top:7px}
+.hero .spec b{display:block;font-family:"Barlow Condensed";font-size:19px;line-height:1.05;text-transform:uppercase}
+.hero .spec span{font-size:12px;color:#a9bcd6;line-height:1.3;display:block;margin-top:2px}
 @media(max-width:520px){.hero .specs{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:719px){.hero .inner{padding:22px 14px 24px}.hero .logo-card{padding:10px 16px 7px}.hero .logo-card img{height:82px}.hero h1{font-size:44px;margin-top:16px}.hero .creed{margin-top:8px}.hero p.lede{font-size:16px;margin-top:10px}.hero .cta-row{margin-top:16px}.hero .licenses{margin-top:12px}.hero .specs{margin-top:18px}}
-.emergency{background:var(--sk-brand);color:#fff;text-align:center;padding:9px 14px;font-weight:700;font-size:15px;line-height:1.45}
+.emergency{background:var(--red);color:#fff;text-align:center;padding:9px 14px;font-weight:700;font-size:15px;line-height:1.45}
 .emergency a{color:#fff;text-decoration:underline;text-underline-offset:2px;white-space:nowrap}
-.quiz{background:var(--surface);border:2px solid var(--sk-brand);border-radius:20px;padding:18px 16px 16px;margin:14px 0 6px;box-shadow:var(--shadow);scroll-margin-top:76px}
+.quiz{background:var(--surface);border:2px solid var(--orange);border-radius:20px;padding:18px 16px 16px;margin:14px 0 6px;box-shadow:var(--shadow);scroll-margin-top:76px}
 .quiz h2{margin:0 0 2px;font-size:30px;text-transform:uppercase;line-height:1}
 .quiz .q-sub{margin:0 0 6px;color:var(--muted);font-size:14.5px}
 .q-group{margin-top:14px}
-.q-group .q-label{font-family:var(--sk-font);font-size:19px;text-transform:uppercase;margin:0 0 7px;display:flex;gap:8px;align-items:center}
-.q-group .q-label .q-num{background:var(--sk-brand);color:#fff;width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:14px;flex:0 0 auto}
+.q-group .q-label{font-family:"Barlow Condensed";font-size:19px;text-transform:uppercase;margin:0 0 7px;display:flex;gap:8px;align-items:center}
+.q-group .q-label .q-num{background:var(--orange);color:#fff;width:24px;height:24px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:14px;flex:0 0 auto}
 .q-opts{display:flex;flex-wrap:wrap;gap:7px}
 .q-opts button{border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:9px 15px;font-weight:600;font-size:15px;cursor:pointer}
 .q-opts button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
-[data-scheme="dark"] .q-opts button.on{background:var(--sk-brand);border-color:var(--sk-tint)} [data-scheme="dark"] 
+@media(prefers-color-scheme:dark){.q-opts button.on{background:var(--orange);border-color:var(--orange)}}
 .quiz-result{display:none;margin-top:16px;background:var(--surface2);border-radius:14px;padding:14px}
 .quiz-result.show{display:block}
 .quiz-result h3{margin:0 0 3px;font-size:24px;text-transform:uppercase}
 .quiz-result p{margin:0 0 10px;font-size:14.5px;color:var(--muted);line-height:1.5}
 .quiz-result .warn{background:#fdecea;border:1.5px solid #c0392b;color:#7b1d14;border-radius:10px;padding:10px 12px;font-size:14.5px;margin:0 0 10px;line-height:1.5}
-[data-scheme="dark"] .quiz-result .warn{background:#3d1712;color:#ffb4a8} [data-scheme="dark"] 
+@media(prefers-color-scheme:dark){.quiz-result .warn{background:#3d1712;color:#ffb4a8}}
 .q-help{margin:-2px 0 8px 32px;color:var(--muted);font-size:13.5px;line-height:1.45}
 .q-placeholder{display:inline-flex;align-items:center;border:1.5px dashed var(--line);color:var(--muted);border-radius:999px;padding:9px 15px;font-weight:600;font-size:15px;background:var(--surface2)}
 a.trustcard{display:block;text-decoration:none}
-a.trustcard:hover{outline:2px solid var(--sk-brand)}
-a.trustcard .go{color:var(--sk-tint);font-weight:700;font-size:14px}
+a.trustcard:hover{outline:2px solid var(--orange)}
+a.trustcard .go{color:var(--gold);font-weight:700;font-size:14px}
 .quiz-progress{display:flex;align-items:center;gap:10px;margin:10px 0 2px}
 .quiz-progress .qp-track{flex:1;height:8px;border-radius:99px;background:var(--surface2);overflow:hidden;border:1px solid var(--line)}
-.quiz-progress .qp-fill{height:100%;background:var(--sk-brand);border-radius:99px;transition:width .25s ease;width:0%}
+.quiz-progress .qp-fill{height:100%;background:var(--orange);border-radius:99px;transition:width .25s ease;width:0%}
 .quiz-progress .qp-text{font-size:13px;font-weight:700;color:var(--muted);white-space:nowrap}
 .quiz-safety{display:none;margin-top:14px;background:#fdecea;border:1.5px solid #c0392b;color:#7b1d14;border-radius:10px;padding:11px 13px;font-size:14.5px;line-height:1.55}
 .quiz-safety.show{display:block}
-[data-scheme="dark"] .quiz-safety{background:#3d1712;color:#ffb4a8} [data-scheme="dark"] 
+@media(prefers-color-scheme:dark){.quiz-safety{background:#3d1712;color:#ffb4a8}}
 .quiz-safety a{color:inherit;font-weight:800}
 .quiz-reasons{list-style:none;margin:0 0 12px;padding:0}
 .quiz-reasons li{position:relative;padding:3px 0 3px 24px;font-size:14.5px;line-height:1.5;color:var(--ink)}
-.quiz-reasons li::before{content:"";background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12.5l5 5L20 6.5'/%3E%3C/svg%3E");background-size:11px;background-position:center;background-repeat:no-repeat;position:absolute;left:0;top:4px;width:17px;height:17px;border-radius:50%;background:var(--good);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.quiz-reasons li::before{content:"✓";position:absolute;left:0;top:4px;width:17px;height:17px;border-radius:50%;background:var(--good);color:#fff;font-size:10.5px;font-weight:700;display:flex;align-items:center;justify-content:center}
 .quiz-also{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:11px 13px;margin:0 0 12px}
 .quiz-also b{display:block;font-size:15px;margin-bottom:2px}
 .quiz-also p{margin:0 0 8px;font-size:14px}
@@ -94,44 +95,44 @@ a.trustcard .go{color:var(--sk-tint);font-weight:700;font-size:14px}
 .lg-grid{display:grid;grid-template-columns:1fr;gap:10px}
 @media(min-width:720px){.lg-grid{grid-template-columns:1fr 1fr}}
 .lg-card{background:var(--surface);border:1.5px solid var(--line);border-radius:14px;overflow:hidden}
-.lg-card.lux{border-color:var(--sk-tint)}
+.lg-card.lux{border-color:var(--gold)}
 .lg-card img{width:100%;height:210px;object-fit:contain;background:#fff;padding:10px;display:block}
 .lg-card .lg-body{padding:12px 14px 14px}
-.lg-card h4{margin:0 0 2px;font-size:19px;font-family:var(--sk-font);text-transform:uppercase}
-.lg-card .lg-tag{font-size:13px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--sk-tint)}
+.lg-card h4{margin:0 0 2px;font-size:19px;font-family:"Barlow Condensed";text-transform:uppercase}
+.lg-card .lg-tag{font-size:11.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;color:var(--orange)}
 .lg-card p{font-size:14px;color:var(--muted);line-height:1.5;margin:6px 0}
 .lg-card ul{margin:6px 0;padding-left:17px;font-size:14px;line-height:1.55}
 .lg-compare{width:100%;border-collapse:collapse;font-size:13.5px;background:var(--surface);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:10px}
 .lg-compare th,.lg-compare td{padding:8px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
-.lg-compare thead th{background:var(--navy);color:#fff;font-family:var(--sk-font);text-transform:uppercase;font-size:14.5px}
+.lg-compare thead th{background:var(--navy);color:#fff;font-family:"Barlow Condensed";text-transform:uppercase;font-size:14.5px}
 .lg-compare td:first-child{font-weight:700;white-space:nowrap}
-.lv-line{display:flex;gap:10px;align-items:flex-start;width:100%;text-align:left;border:1.5px solid var(--sk-brand);background:var(--surface);border-radius:12px;padding:12px 13px;margin-top:12px;cursor:pointer;color:var(--ink)}
-.lv-line .lv-box{flex:0 0 auto;width:22px;height:22px;border-radius:6px;border:2px solid var(--sk-brand);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;margin-top:1px}
-.lv-line.on .lv-box{background:var(--sk-brand)}
+.lv-line{display:flex;gap:10px;align-items:flex-start;width:100%;text-align:left;border:1.5px solid var(--orange);background:var(--surface);border-radius:12px;padding:12px 13px;margin-top:12px;cursor:pointer;color:var(--ink)}
+.lv-line .lv-box{flex:0 0 auto;width:22px;height:22px;border-radius:6px;border:2px solid var(--orange);display:flex;align-items:center;justify-content:center;font-weight:800;color:#fff;margin-top:1px}
+.lv-line.on .lv-box{background:var(--orange)}
 .lv-line b{display:block;font-size:15px}
 .lv-line span{font-size:13.5px;color:var(--muted);line-height:1.45;display:block}
 .iconbullets{display:grid;grid-template-columns:1fr;gap:8px;margin:12px 0 2px}
 @media(min-width:720px){.iconbullets{grid-template-columns:repeat(3,1fr)}}
 .iconbullet{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:11px 12px;display:flex;gap:9px;align-items:flex-start}
-.iconbullet svg{width:22px;height:22px;flex:0 0 auto;stroke:var(--sk-brand);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-top:1px}
+.iconbullet svg{width:22px;height:22px;flex:0 0 auto;stroke:var(--orange);fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;margin-top:1px}
 .iconbullet b{display:block;font-size:14.5px;line-height:1.25}
-.iconbullet span{font-size:13px;color:var(--muted);line-height:1.35;display:block}
+.iconbullet span{font-size:12.5px;color:var(--muted);line-height:1.35;display:block}
 .trustgrid{display:grid;grid-template-columns:1fr;gap:8px;margin:12px 0 4px}
 @media(min-width:680px){.trustgrid{grid-template-columns:repeat(3,1fr)}}
 .trustcard{background:var(--navy);color:#fff;border-radius:14px;padding:15px}
-.trustcard h3{margin:0 0 4px;font-size:20px;text-transform:uppercase;color:var(--sk-tint)}
+.trustcard h3{margin:0 0 4px;font-size:20px;text-transform:uppercase;color:var(--gold)}
 .trustcard p{margin:0;font-size:14px;line-height:1.5;color:#dbe6f4}
 .brandstrip{background:#fff;border-bottom:1px solid var(--line)}
 .brandstrip .bs-inner{max-width:1060px;margin:0 auto;padding:12px 16px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;justify-content:center}
-.brandstrip .bs-label{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
-.brandstrip .bs-chip{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;border:1.5px solid var(--navy);color:var(--navy);font-weight:700;font-size:13px;letter-spacing:.04em;padding:8px 14px;border-radius:12px;text-transform:uppercase;white-space:nowrap;background:#fff}
+.brandstrip .bs-label{font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.brandstrip .bs-chip{display:inline-flex;align-items:center;justify-content:center;box-sizing:border-box;border:1.5px solid var(--navy);color:var(--navy);font-weight:700;font-size:12.5px;letter-spacing:.04em;padding:8px 14px;border-radius:12px;text-transform:uppercase;white-space:nowrap;background:#fff}
 main{max-width:1060px;margin:0 auto;padding:0 12px}
 .tabs{position:sticky;top:0;z-index:80;background:var(--bg);padding:10px 12px 8px;border-bottom:1px solid var(--line);box-shadow:0 4px 14px rgba(11,30,58,.08)}
 .tabs .seg{max-width:1060px;margin:0 auto;display:flex;background:var(--surface2);border:1px solid var(--line);border-radius:999px;padding:3px;gap:2px}
 .tabs button{flex:1;border:0;background:transparent;color:var(--muted);font-weight:700;font-size:13.5px;padding:9px 2px;border-radius:999px;cursor:pointer;min-height:44px;white-space:nowrap;touch-action:manipulation;-webkit-tap-highlight-color:transparent}
-@media(max-width:480px){.tabs{padding:8px 8px 6px}.tabs button{font-size:13px;padding:10px 1px}}
+@media(max-width:480px){.tabs{padding:8px 8px 6px}.tabs button{font-size:12.5px;padding:10px 1px}}
 .tabs button.on{background:var(--navy);color:#fff}
-[data-scheme="dark"] .tabs button.on{background:var(--sk-brand)} [data-scheme="dark"] 
+@media(prefers-color-scheme:dark){.tabs button.on{background:var(--orange)}}
 .view{display:none}.view.on{display:block}
 .viewhint{color:var(--muted);font-size:14.5px;margin:4px 2px 12px;line-height:1.5}
 .pkg-row{display:flex;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 10px;margin:0 -2px;scrollbar-width:none}
@@ -141,40 +142,40 @@ main{max-width:1060px;margin:0 auto;padding:0 12px}
 .pkg .sysrow{display:flex;gap:8px;padding:10px 14px 0}
 .pkg .sysrow figure{flex:1;margin:0;text-align:center}
 .pkg .sysrow img{width:100%;height:56px;object-fit:contain;padding:3px;background:#eef2f6;border:1px solid var(--line);border-radius:9px;display:block}
-.pkg .sysrow figcaption{font-size:13px;font-weight:700;color:var(--muted);margin-top:3px;line-height:1.25;text-transform:uppercase;letter-spacing:.03em}
+.pkg .sysrow figcaption{font-size:10.5px;font-weight:700;color:var(--muted);margin-top:3px;line-height:1.25;text-transform:uppercase;letter-spacing:.03em}
 .pkg .body{padding:12px 14px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
-.pkg .bestfor{font-size:13.5px;margin:0}.pkg .bestfor b{color:var(--sk-tint)}
-.whyline{font-size:13px;color:var(--muted);margin:0;line-height:1.45}.whyline b{color:var(--sk-tint)}
+.pkg .bestfor{font-size:13.5px;margin:0}.pkg .bestfor b{color:var(--orange)}
+.whyline{font-size:13px;color:var(--muted);margin:0;line-height:1.45}.whyline b{color:var(--orange)}
 @media(min-width:720px){.pkg-row{display:grid;grid-template-columns:repeat(2,1fr);overflow:visible}.pkg{flex:none;max-width:none}}
 @media(min-width:1020px){.pkg-row{grid-template-columns:repeat(3,1fr)}}
 @media(max-width:719px){.pkg-row{flex-direction:column;overflow:visible}.pkg{flex:none;max-width:none;width:100%}}
-.pkg.pop{border-color:var(--sk-tint)}
-.pkg.selected{border-color:var(--sk-tint);box-shadow:var(--shadow);outline:3px solid rgba(38,67,135,.25)}
-.pkg .tier{font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
+.pkg.pop{border-color:var(--orange)}
+.pkg.selected{border-color:var(--orange);box-shadow:var(--shadow);outline:3px solid rgba(232,106,16,.25)}
+.pkg .tier{font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--muted);text-transform:uppercase}
 .pkg h3{margin:0;font-size:22px;line-height:1;text-transform:uppercase}
 .pkg .for{color:var(--muted);font-size:13.5px;margin:0}
-.pkg .count{font-weight:700;color:var(--navy);background:var(--surface2);border-radius:999px;padding:3px 10px;font-size:13px;width:fit-content}
-[data-scheme="dark"] .pkg .count{color:var(--ink)} [data-scheme="dark"] 
-.badge-pop{position:absolute;top:8px;right:8px;z-index:2;background:var(--sk-brand);color:#fff;font-size:13px;font-weight:700;letter-spacing:.05em;padding:4px 9px;border-radius:999px;text-transform:uppercase;box-shadow:0 2px 8px rgba(0,0,0,.3)}
-.badge-rec{display:inline-flex;align-items:center;gap:5px;background:var(--good);color:#fff;font-size:13px;font-weight:700;letter-spacing:.06em;padding:4px 10px;border-radius:999px;text-transform:uppercase;width:fit-content}
+.pkg .count{font-weight:700;color:var(--navy);background:var(--surface2);border-radius:999px;padding:3px 10px;font-size:12.5px;width:fit-content}
+@media(prefers-color-scheme:dark){.pkg .count{color:var(--ink)}}
+.badge-pop{position:absolute;top:8px;right:8px;z-index:2;background:var(--orange);color:#fff;font-size:11px;font-weight:700;letter-spacing:.05em;padding:4px 9px;border-radius:999px;text-transform:uppercase;box-shadow:0 2px 8px rgba(0,0,0,.3)}
+.badge-rec{display:inline-flex;align-items:center;gap:5px;background:var(--good);color:#fff;font-size:11.5px;font-weight:700;letter-spacing:.06em;padding:4px 10px;border-radius:999px;text-transform:uppercase;width:fit-content}
 .pkg .spacer{flex:1}
-.link-btn{background:none;border:0;color:var(--sk-tint);font-weight:700;font-size:14.5px;cursor:pointer;padding:4px 0;text-align:left}
+.link-btn{background:none;border:0;color:var(--orange);font-weight:700;font-size:14.5px;cursor:pointer;padding:4px 0;text-align:left}
 .btn{appearance:none;border:0;cursor:pointer;border-radius:999px;padding:11px 16px;font-weight:700;font-size:15px;text-decoration:none;display:inline-flex;align-items:center;justify-content:center;gap:6px}
-.btn-primary{background:var(--sk-brand);color:#fff}.btn-primary:hover{background:var(--sk-brand-press)}.btn-primary.added{background:var(--good)}
+.btn-primary{background:var(--orange);color:#fff}.btn-primary:hover{background:var(--orange2)}.btn-primary.added{background:var(--good)}
 .btn-navy{background:var(--navy);color:#fff}.btn-outline{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
 .pick-btn{width:100%}
 .size-note{background:var(--surface);border:1.5px solid var(--line);border-radius:12px;padding:14px;font-size:14.5px;margin:8px 0 6px;line-height:1.55}
-.size-note b{color:var(--sk-tint)}
+.size-note b{color:var(--orange)}
 .steps{display:grid;grid-template-columns:1fr;gap:8px;margin:12px 0}
 @media(min-width:680px){.steps{grid-template-columns:repeat(3,1fr)}}
 .step{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:12px}
-.step b{display:block;font-family:var(--sk-font);font-size:18px;text-transform:uppercase;margin-bottom:2px}
+.step b{display:block;font-family:"Barlow Condensed";font-size:18px;text-transform:uppercase;margin-bottom:2px}
 .step p{margin:0;color:var(--muted);font-size:13.5px;line-height:1.5}
 .chips{display:flex;gap:6px;overflow-x:auto;padding:2px 2px 8px;scrollbar-width:none}
 .chips::-webkit-scrollbar{display:none}
 .chips button{flex:0 0 auto;border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 13px;font-weight:600;font-size:14px;cursor:pointer}
 .chips button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
-[data-scheme="dark"] .chips button.on{background:var(--sk-brand);border-color:var(--sk-tint)} [data-scheme="dark"] 
+@media(prefers-color-scheme:dark){.chips button.on{background:var(--orange);border-color:var(--orange)}}
 .search{width:100%;padding:11px 12px;border:1.5px solid var(--line);border-radius:10px;background:var(--surface);color:var(--ink);font-size:16px;margin-bottom:8px}
 .cat-sub{color:var(--muted);font-size:13.5px;margin:0 2px 8px}
 .prod-list{display:flex;flex-direction:column;gap:8px}
@@ -184,13 +185,13 @@ main{max-width:1060px;margin:0 auto;padding:0 12px}
 .prod .top{display:flex;gap:11px;align-items:flex-start}
 .prod .thumb{flex:0 0 86px;width:86px;height:86px;border-radius:9px;object-fit:cover;background:#fff;border:1px solid var(--line)}
 .prod .thumb.tile{display:flex;align-items:center;justify-content:center;background:var(--navy);border-color:var(--navy)}
-.prod .thumb.tile svg{width:40px;height:40px;stroke:var(--sk-tint);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.prod .thumb.tile svg{width:40px;height:40px;stroke:var(--gold);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .prod .info{flex:1;min-width:0}
 .prod h4{margin:0 0 3px;font-size:16px;line-height:1.2}
 .prod .desc{margin:0;font-size:13.5px;color:var(--muted);line-height:1.45}
 .prod .tags{display:flex;flex-wrap:wrap;gap:5px;margin-top:7px}
-.prod .tag{font-size:13px;font-weight:700;border-radius:999px;padding:2.5px 9px;background:var(--surface2);color:var(--ink)}
-.prod .tag.best{background:rgba(38,67,135,.14);color:var(--sk-tint)}
+.prod .tag{font-size:11.5px;font-weight:700;border-radius:999px;padding:2.5px 9px;background:var(--surface2);color:var(--ink)}
+.prod .tag.best{background:rgba(232,106,16,.14);color:var(--orange)}
 .prod .row{display:flex;align-items:center;gap:8px}.prod .row .spacer{flex:1}
 .add-btn{background:var(--navy);color:#fff;border:0;border-radius:999px;padding:8px 16px;font-weight:700;cursor:pointer;font-size:14.5px}
 .add-btn.added{background:var(--good)}
@@ -199,20 +200,20 @@ main{max-width:1060px;margin:0 auto;padding:0 12px}
 .qty b{min-width:16px;text-align:center}
 .decide{display:flex;gap:6px;flex-wrap:wrap;margin:0 2px 10px;align-items:center}
 .decide span{font-size:13.5px;font-weight:700;color:var(--muted)}
-.decide button{border:1.5px solid var(--sk-brand);background:transparent;color:var(--sk-tint);border-radius:999px;padding:6px 12px;font-weight:700;font-size:13.5px;cursor:pointer}
+.decide button{border:1.5px solid var(--orange);background:transparent;color:var(--orange);border-radius:999px;padding:6px 12px;font-weight:700;font-size:13.5px;cursor:pointer}
 .empty-note{color:var(--muted);text-align:center;padding:18px}
 .compare-scroll{overflow-x:auto;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface)}
 table.compare{border-collapse:collapse;font-size:13.5px;min-width:1020px;width:100%}
 table.compare th,table.compare td{padding:8px 9px;border-bottom:1px solid var(--line);text-align:center}
 table.compare td:first-child,table.compare th:first-child{text-align:left;min-width:200px;font-weight:600;position:sticky;left:0;background:var(--surface)}
-table.compare thead th{background:var(--navy);color:#fff;font-family:var(--sk-font);font-size:15px;text-transform:uppercase}
-table.compare thead th.pop{background:var(--sk-brand)}
+table.compare thead th{background:var(--navy);color:#fff;font-family:"Barlow Condensed";font-size:15px;text-transform:uppercase}
+table.compare thead th.pop{background:var(--orange)}
 table.compare .yes{color:var(--good);font-weight:700}table.compare .no{color:var(--muted)}
 .fineprint{color:var(--muted);font-size:13px;margin-top:8px;line-height:1.5}
 .listbar{position:fixed;left:0;right:0;bottom:0;z-index:40;background:var(--navy);color:#fff;padding:10px 14px calc(10px + env(safe-area-inset-bottom));display:flex;align-items:center;gap:12px;box-shadow:0 -6px 20px rgba(11,30,58,.25)}
-.listbar .count{font-family:var(--sk-font);font-size:20px;font-weight:700}
-.listbar .count small{display:block;font-family:var(--sk-font);font-size:13px;font-weight:400;opacity:.85}
-.listbar .lic{display:block;font-family:var(--sk-font);font-size:13px;font-weight:600;opacity:.75;letter-spacing:.02em}
+.listbar .count{font-family:"Barlow Condensed";font-size:20px;font-weight:700}
+.listbar .count small{display:block;font-family:"Barlow";font-size:12px;font-weight:400;opacity:.85}
+.listbar .lic{display:block;font-family:"Barlow";font-size:10.5px;font-weight:600;opacity:.75;letter-spacing:.02em}
 .listbar .spacer{flex:1}
 .sheet-wrap{position:fixed;inset:0;z-index:70;display:none}.sheet-wrap.open{display:block}
 .sheet-bg{position:absolute;inset:0;background:rgba(6,15,30,.55)}
@@ -226,11 +227,11 @@ table.compare .yes{color:var(--good);font-weight:700}table.compare .no{color:var
 .sheet h3.mini{font-size:18px;text-transform:uppercase;margin:12px 0 4px}
 .sel-empty{color:var(--muted);border:1.5px dashed var(--line);border-radius:10px;padding:12px;text-align:center}
 .sel-item{display:flex;justify-content:space-between;gap:10px;padding:8px 0;border-bottom:1px solid var(--line);font-size:15px}
-.sel-item .x2{background:none;border:0;color:var(--sk-tint);font-weight:700;cursor:pointer}
+.sel-item .x2{background:none;border:0;color:var(--orange);font-weight:700;cursor:pointer}
 .sel-item small{display:block;color:var(--muted)}
 form.client{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
-form.client label{font-size:13px;font-weight:600;display:block}
-form.client input,form.client textarea,form.client select{width:100%;margin-top:3px;padding:9px;border:1.5px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);font-family:var(--sk-font);font-size:16px}
+form.client label{font-size:12.5px;font-weight:600;display:block}
+form.client input,form.client textarea,form.client select{width:100%;margin-top:3px;padding:9px;border:1.5px solid var(--line);border-radius:9px;background:var(--bg);color:var(--ink);font-family:"Barlow";font-size:16px}
 form.client .full{grid-column:1/-1}
 @media(max-width:520px){form.client{grid-template-columns:1fr}}
 .actions{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}.actions .btn{flex:1 1 auto}
@@ -239,12 +240,12 @@ form.client .full{grid-column:1/-1}
 .submit-status.ok{background:#e6f4ec;border:1.5px solid var(--good);color:#0f5132}
 .submit-status.err{background:#fdecea;border:1.5px solid #c0392b;color:#7b1d14}
 .acc{border:1.5px solid var(--line);border-radius:12px;background:var(--surface);margin-bottom:8px;overflow:hidden}
-.acc summary{cursor:pointer;padding:11px 13px;font-weight:700;font-size:15.5px;list-style:none;display:flex;justify-content:space-between;gap:8px;align-items:center;font-family:var(--sk-font);text-transform:uppercase}
+.acc summary{cursor:pointer;padding:11px 13px;font-weight:700;font-size:15.5px;list-style:none;display:flex;justify-content:space-between;gap:8px;align-items:center;font-family:"Barlow Condensed";text-transform:uppercase}
 .acc summary::-webkit-details-marker{display:none}
-.acc summary .meta{color:var(--muted);font-weight:600;font-size:13px;font-family:var(--sk-font);text-transform:none}
+.acc summary .meta{color:var(--muted);font-weight:600;font-size:12.5px;font-family:"Barlow";text-transform:none}
 .acc .acc-body{padding:2px 13px 12px;font-size:14.5px}.acc .acc-body p{margin:0 0 8px}
 #guideList{display:flex;flex-direction:column;gap:12px}
-.g-card{--acc:var(--sk-brand);--acc-l:var(--sk-tint);--acc-ink:#fff;border:1px solid var(--line);border-radius:16px;background:var(--surface);box-shadow:0 6px 20px rgba(11,30,58,.08);overflow:hidden}
+.g-card{--acc:var(--orange);--acc-l:var(--gold);--acc-ink:#fff;border:1px solid var(--line);border-radius:16px;background:var(--surface);box-shadow:0 6px 20px rgba(11,30,58,.08);overflow:hidden}
 .g-card summary{list-style:none;cursor:pointer;display:block;padding:0}.g-card summary::-webkit-details-marker{display:none}
 .g-photo{position:relative;height:118px;overflow:hidden;background:var(--navy)}
 .g-card[open] .g-photo{height:150px}
@@ -252,7 +253,7 @@ form.client .full{grid-column:1/-1}
 .g-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(11,30,58,.15),rgba(11,30,58,.88))}
 .g-chip{position:absolute;top:10px;left:12px;z-index:2;width:34px;height:34px;border-radius:50%;background:var(--acc);display:flex;align-items:center;justify-content:center}
 .g-chip svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.g-count{position:absolute;top:12px;right:12px;z-index:2;background:rgba(11,30,58,.55);color:#fff;font-size:13px;font-weight:700;padding:3px 10px;border-radius:999px}
+.g-count{position:absolute;top:12px;right:12px;z-index:2;background:rgba(11,30,58,.55);color:#fff;font-size:11.5px;font-weight:700;padding:3px 10px;border-radius:999px}
 .g-titles{position:absolute;left:14px;right:58px;bottom:11px;z-index:2;color:#fff}
 .g-titles h3{margin:0;font-size:23px;line-height:1;text-transform:uppercase;color:#fff}
 .g-titles p{margin:3px 0 0;font-size:13.5px;font-weight:600;color:var(--acc-l)}
@@ -262,20 +263,20 @@ form.client .full{grid-column:1/-1}
 .g-what{margin:0 0 10px;font-size:15.5px;line-height:1.55}
 .g-why{list-style:none;margin:0 0 4px;padding:0}
 .g-why li{position:relative;padding:4px 0 4px 28px;font-size:14.5px;line-height:1.5}
-.g-why li::before{content:"";background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4 12.5l5 5L20 6.5'/%3E%3C/svg%3E");background-size:11px;background-position:center;background-repeat:no-repeat;position:absolute;left:0;top:5px;width:19px;height:19px;border-radius:50%;background:var(--acc);color:var(--acc-ink);font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.g-why li::before{content:"✓";position:absolute;left:0;top:5px;width:19px;height:19px;border-radius:50%;background:var(--acc);color:var(--acc-ink);font-size:11.5px;font-weight:700;display:flex;align-items:center;justify-content:center}
 .g-sec{display:flex;align-items:center;gap:9px;margin:14px 0 2px;font-size:16.5px;text-transform:uppercase}
 .g-sec::after{content:"";flex:1;height:3px;border-radius:99px;background:var(--acc);opacity:.85}
 .g-prow{display:flex;gap:11px;align-items:flex-start;padding:9px 0;border-bottom:1px solid var(--line)}
 .g-prow:last-of-type{border-bottom:0}
 .g-thumb{flex:0 0 46px;width:46px;height:46px;border-radius:9px;object-fit:cover;background:#fff;border:1px solid var(--line)}
 .g-thumb.tile{display:flex;align-items:center;justify-content:center;background:var(--navy);border-color:var(--navy)}
-.g-thumb.tile svg{width:24px;height:24px;stroke:var(--sk-tint);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+.g-thumb.tile svg{width:24px;height:24px;stroke:var(--gold);fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
 .g-prow .g-pt{flex:1;min-width:0}.g-prow .g-pn{font-weight:700;font-size:14.5px}.g-prow .g-pr{color:var(--muted);font-size:13.5px;line-height:1.45}
 .g-pkgs{display:flex;flex-wrap:wrap;align-items:center;gap:6px;margin:13px 0 0;font-size:13.5px}
-.g-pkgs-l{font-weight:700;color:var(--muted)}.g-pill{background:var(--acc);color:var(--acc-ink);font-weight:700;font-size:13px;padding:3px 11px;border-radius:999px}
+.g-pkgs-l{font-weight:700;color:var(--muted)}.g-pill{background:var(--acc);color:var(--acc-ink);font-weight:700;font-size:12.5px;padding:3px 11px;border-radius:999px}
 .g-card .g-actions{margin-top:13px;display:flex;gap:8px;flex-wrap:wrap}.g-card .g-actions .btn{padding:8px 14px;font-size:14px}
 .g-callout{background:var(--surface2);border-radius:10px;padding:11px 13px;margin:12px 0 2px;font-size:14.5px;line-height:1.55}
-.g-callout b{color:var(--sk-tint)}
+.g-callout b{color:var(--orange)}
 .mf{border:1.5px solid var(--line);border-radius:10px;padding:10px 12px;margin:0 0 8px;font-size:14.5px;line-height:1.5}
 .cz-h{font-size:19px;text-transform:uppercase;margin:14px 2px 8px}
 .basegrid{display:grid;grid-template-columns:1fr 1fr;gap:8px}
@@ -283,25 +284,25 @@ form.client .full{grid-column:1/-1}
 .base-btn{border:2px solid var(--line);background:var(--surface);border-radius:12px;padding:0;overflow:hidden;cursor:pointer;text-align:left;color:var(--ink)}
 .base-btn img{width:100%;height:64px;object-fit:cover;display:block}
 .base-btn .bb-t{display:block;padding:7px 10px 9px;font-weight:700;font-size:14.5px;line-height:1.2}
-.base-btn .bb-t small{display:block;color:var(--muted);font-weight:600;font-size:13px}
-.base-btn.on{border-color:var(--sk-tint);outline:3px solid rgba(38,67,135,.25)}
-.base-btn .bb-scratch{height:64px;background:var(--navy);color:var(--sk-tint);display:flex;align-items:center;justify-content:center;font-family:var(--sk-font);font-size:19px;letter-spacing:.05em}
+.base-btn .bb-t small{display:block;color:var(--muted);font-weight:600;font-size:12px}
+.base-btn.on{border-color:var(--orange);outline:3px solid rgba(232,106,16,.25)}
+.base-btn .bb-scratch{height:64px;background:var(--navy);color:var(--gold);display:flex;align-items:center;justify-content:center;font-family:"Barlow Condensed";font-size:19px;letter-spacing:.05em}
 .cz-item{display:flex;gap:8px;align-items:center;padding:7px 0;border-bottom:1px solid var(--line);font-size:14px}
 .cz-item span{flex:1}.cz-item.off span{color:var(--muted);text-decoration:line-through}
-.cz-tog{flex:0 0 auto;border:1.5px solid var(--line);background:var(--surface);color:var(--sk-tint);font-weight:700;border-radius:999px;padding:5px 11px;font-size:13px;cursor:pointer}
+.cz-tog{flex:0 0 auto;border:1.5px solid var(--line);background:var(--surface);color:var(--orange);font-weight:700;border-radius:999px;padding:5px 11px;font-size:13px;cursor:pointer}
 .cz-item.off .cz-tog{color:var(--good);border-color:var(--good)}
 .choice-g{margin:0 0 12px}.choice-g .cl{font-weight:700;font-size:14.5px;margin:0 0 5px}
 .seg2{display:flex;flex-wrap:wrap;gap:6px}
 .seg2 button{border:1.5px solid var(--line);background:var(--surface);color:var(--ink);border-radius:999px;padding:7px 12px;font-weight:600;font-size:13.5px;cursor:pointer}
 .seg2 button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
-[data-scheme="dark"] .seg2 button.on{background:var(--sk-brand);border-color:var(--sk-tint)} [data-scheme="dark"] 
+@media(prefers-color-scheme:dark){.seg2 button.on{background:var(--orange);border-color:var(--orange)}}
 .cz-sum{background:var(--surface2);border-radius:12px;padding:11px 13px;font-size:14.5px;margin:12px 0;line-height:1.5}
 .cz-xrow{display:flex;gap:8px;align-items:center;padding:6px 0;border-bottom:1px solid var(--line);font-size:14px}
 .cz-xrow span{flex:1}
 .toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(var(--bar-h) + env(safe-area-inset-bottom) + 16px);background:var(--navy);color:#fff;padding:10px 18px;border-radius:999px;font-weight:600;opacity:0;pointer-events:none;transition:opacity .25s;z-index:90;max-width:92vw;text-align:center;font-size:14.5px}
 .toast.show{opacity:1}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:18px 14px 6px;line-height:1.6}
-footer a{color:var(--sk-tint)}
+footer a{color:var(--orange)}
 footer .flogo{display:inline-block;background:#fff;border-radius:10px;padding:10px 18px;margin-bottom:10px;border:1px solid var(--line)}
 footer .flogo img{height:104px;width:auto;display:block;max-width:82vw}
 .sheet .pkg-photo{width:100%;height:220px;object-fit:cover;background:#fff;border:1px solid var(--line);border-radius:10px;margin:4px 0 10px;display:block}
@@ -323,63 +324,6 @@ body.sk{padding-bottom:calc(var(--sk-tab-h,54px) + env(safe-area-inset-bottom,0p
 .chips{top:55px!important}
 .listbar{bottom:calc(var(--sk-tab-h,54px) + env(safe-area-inset-bottom,0px))}
 .sk-header{z-index:60}
-
-/* ---- Batch C upgrade (kit v1.3): stack pages, kit sheets, tap/type, hero ---- */
-.icon-inline{width:15px;height:15px;vertical-align:-2px}
-.sk-page,.sk-page__body{background:var(--bg)}
-.sk-page__body{max-width:1060px;padding-bottom:calc(var(--sk-tab-h,54px) + 128px)}
-.chips{top:0!important}
-.app-sheet-close{width:44px;height:44px;border:0;background:transparent;color:var(--sk-text-2);display:grid;place-items:center;border-radius:50%;cursor:pointer;justify-self:end}
-.app-sheet-close .sk-icon{width:22px;height:22px}
-#sheetBody h2{margin:0 0 2px;font-size:26px;text-transform:uppercase;line-height:1.05}
-#sheetBody .sub{color:var(--muted);font-size:14px;margin:0 0 10px;line-height:1.5}
-#sheetBody ul.items,#sheetBody .hl{margin:6px 0 12px;padding-left:18px;font-size:14.5px}
-#sheetBody ul.items li,#sheetBody .hl li{margin:3px 0}
-#sheetBody h3.mini{font-size:18px;text-transform:uppercase;margin:12px 0 4px}
-#sheetBody .pkg-photo{width:100%;height:220px;object-fit:contain;background:#fff;border:1px solid var(--line);border-radius:10px;margin:4px 0 10px;display:block;padding:10px}
-#sheetSelList{background:var(--surface2);border-radius:14px;padding:4px 12px}
-#sheetSelList .sel-item:last-child{border-bottom:0}
-.btn{min-height:44px}
-.chips button{min-height:44px}
-.q-opts button{min-height:44px}
-.decide button{min-height:44px}
-.seg2 button{min-height:44px}
-.cz-tog{min-height:44px;display:inline-flex;align-items:center}
-.qty button{width:44px;height:44px}
-.link-btn{min-height:44px;display:inline-flex;align-items:center}
-.sel-item .x2{min-width:44px;min-height:44px}
-.acc summary{min-height:44px}
-form.client input,form.client select,form.client textarea{min-height:44px}
-.incl-pill.sm{min-height:44px}
-.lv-line{min-height:44px}
-.btn.btn-primary{color:#fff}
-a.btn-primary{color:#fff}
-@media print{.sk-sheet{display:none!important}}
-
-.hero{background:var(--surface);color:var(--ink);border-bottom:1px solid var(--line)}
-.hero p,.hero p.lede{color:var(--muted)}
-.hero h1 em{color:var(--sk-brand)}
-.hero .spec span{color:var(--muted)}
-.hero .spec b{color:var(--ink)}
-.hero .promise{color:var(--muted)}
-.hero .promise b{color:var(--ink)}
-.hero .contractor-line{color:var(--sk-brand)}
-.hero .licenses{color:var(--muted)}
-.hero .creed{color:var(--sk-brand)}
-.btn-ghost{background:transparent;color:var(--sk-brand);border:1.5px solid var(--line)}
-.btn-ghost:hover{border-color:var(--sk-brand)}
-.hero-stage{border:1px solid var(--line);box-shadow:0 10px 30px rgba(11,30,58,.13)}
-[data-scheme="dark"] .hero{background:var(--navy);color:#fff;border-bottom:1px solid var(--line)}
-[data-scheme="dark"] .hero p,[data-scheme="dark"] .hero p.lede{color:#dbe6f4}
-[data-scheme="dark"] .hero h1 em{color:#fff}
-[data-scheme="dark"] .hero .spec span{color:#a9bcd6}
-[data-scheme="dark"] .hero .spec b{color:#fff}
-[data-scheme="dark"] .hero .promise{color:#a9bcd6}
-[data-scheme="dark"] .hero .promise b{color:#fff}
-[data-scheme="dark"] .hero .contractor-line{color:#dbe6f4}
-[data-scheme="dark"] .hero .licenses{color:#a9bcd6}
-[data-scheme="dark"] .btn-ghost{color:#fff;border-color:rgba(255,255,255,.55)}
-[data-scheme="dark"] .hero-stage{border:0;box-shadow:0 24px 50px rgba(0,0,0,.35)}
 </style>
 </head>
 <body class="sk">
@@ -408,7 +352,8 @@ a.btn-primary{color:#fff}
   <div class="inner">
     <div class="logo-card"><img loading="lazy" src="assets/img-ca3479fe3a52.webp" alt="Sharma Electric &amp; HVAC — Power. Comfort. Trust."/></div>
     <h1>Electrical, <em>done right.</em></h1>
-        <p class="lede">For Central Florida homeowners: new Siemens panels, safer outlets and detectors, lighting and fans, EV and generator hookups — and straight answers when something stops working.</p>
+    <p class="creed">No shortcuts. No excuses.</p>
+    <p class="lede">For Central Florida homeowners: new Siemens panels, safer outlets and detectors, lighting and fans, EV and generator hookups — and straight answers when something stops working.</p>
     <div class="cta-row">
       <a class="btn btn-primary" href="tel:+14078819076">Call 407 881 9076</a>
       <a class="btn btn-ghost" href="#quiz">Start the six questions ↓</a>
@@ -433,7 +378,7 @@ a.btn-primary{color:#fff}
   </div>
 </div>
 
-<main id="app">
+<main>
   <section class="view on" id="view-packages">
     <div class="quiz" id="quiz">
       <h2>Not sure where to start? Six quick questions.</h2>
@@ -592,7 +537,7 @@ a.btn-primary{color:#fff}
   </section>
 
   <section class="view" id="view-compare">
-    <p class="viewhint">Side by side: what each package includes. <svg class="sk-icon icon-inline" aria-hidden="true"><use href="#i-check"/></svg> = included · <svg class="sk-icon icon-inline" aria-hidden="true"><use href="#i-plus"/></svg> = available — ask Sharma to add it · — = not part of that package.</p>
+    <p class="viewhint">Side by side: what each package includes. ✓ = included · ○ = available — ask Sharma to add it · — = not part of that package.</p>
     <div class="compare-scroll"><table class="compare" id="compareTable"></table></div>
     <p class="fineprint">Final scope and price depend on your home — panel condition and capacity, wiring condition, and permit requirements — all confirmed by Sharma at the quote visit and in your priced quote. Sharma confirms panel capacity and sizing on site; nothing on this page is a promise that a given circuit or upgrade fits your existing panel until Sharma has seen it.</p>
   </section>
@@ -612,19 +557,14 @@ a.btn-primary{color:#fff}
   <button class="btn btn-primary" id="btnOpenList" type="button">Send my picks →</button>
 </div>
 
-<section class="sk-sheet" id="sheetWrap" role="dialog" aria-modal="true" aria-hidden="true">
-  <div class="sk-sheet__grab"></div>
-  <div class="sk-sheet__head"><span></span><span class="sk-sheet__title"></span><button class="app-sheet-close" id="sheetClose" type="button" aria-label="Close"><svg class="sk-icon" aria-hidden="true"><use href="#i-close"/></svg></button></div>
-  <div class="sk-sheet__body" id="sheetBody"></div>
-</section>
-<section class="sk-sheet" id="appearanceSheet" role="dialog" aria-modal="true" aria-hidden="true">
-  <div class="sk-sheet__grab"></div>
-  <div class="sk-sheet__head"><span></span><span class="sk-sheet__title">Settings</span><button class="app-sheet-close" type="button" data-sheet-close aria-label="Close"><svg class="sk-icon" aria-hidden="true"><use href="#i-close"/></svg></button></div>
-  <div class="sk-sheet__body">
-    <div class="sk-section-title"><span>Display</span></div>
-    <div class="sk-list" id="appearance"></div>
+<div class="sheet-wrap" id="sheetWrap" aria-hidden="true">
+  <div class="sheet-bg" id="sheetBg"></div>
+  <div class="sheet" role="dialog" aria-modal="true">
+    <div class="grip"></div>
+    <button class="x" id="sheetClose" type="button" aria-label="Close">✕</button>
+    <div id="sheetBody"></div>
   </div>
-</section>
+</div>
 <div class="toast" id="toast" role="status"></div>
 
 <script>
@@ -654,7 +594,7 @@ var PKGROWS={
  "power":[["assets/img-8f516524a66b.webp","Level 2 charging"],["assets/img-2636fdb838b4.webp","Generac GP9500E"],["assets/img-424cbd8379f8.webp","NEMA 14-50 outlet"]],
  "repair":[["assets/img-f28cf4796e33.webp","Fault finding"],["assets/img-6e88e3084f06.webp","Panel & breakers"],["assets/img-44c2bfb6b948.webp","Switches & devices"]]};
 function pkgRow(id){return '<div class="sysrow">'+PKGROWS[id].map(function(r){return '<figure><img loading="lazy" src="'+r[0]+'" alt=""/><figcaption>'+r[1]+"</figcaption></figure>"}).join("")+"</div>"}
-function pkgBadge(id){return id==="panel"?'<span class="badge-rec">'+STAR_ICON+' Sharma Standard · Siemens</span>':(id==="repair"?'<span class="badge-rec" style="background:var(--navy)">Service call · Find &amp; fix</span>':'<span class="badge-rec">Homeowner favorite</span>')}
+function pkgBadge(id){return id==="panel"?'<span class="badge-rec">★ Sharma Standard · Siemens</span>':(id==="repair"?'<span class="badge-rec" style="background:var(--navy)">Service call · Find &amp; fix</span>':'<span class="badge-rec">Homeowner favorite</span>')}
 var PKGWHY={"panel":"Almost everything you might add — an EV charger, a hot tub, a bigger AC, a workshop — lands on the panel. A modern 200A Siemens panel with room to spare is what makes the rest possible, safely.",
  "safety":"Most electrical injuries at home come from a short list of causes — water near outlets, undetected smoke or CO, and surge damage. This package closes all three gaps in one visit.",
  "lighting":"Lighting is the upgrade you see every single day. Done right — layout, dimming, fan-rated boxes — it changes how the whole home feels, and it is the project neighbors notice first.",
@@ -668,38 +608,38 @@ var PKGBEST={"panel":"Fuse box, 100A panel, no spaces left, or breakers that tri
  "repair":"Something stopped working, smells wrong, buzzes or sparks? Start here — and if it's sparking now, call, don't tap."
 };
 var COMPARE=[
- ["New Siemens 200A panel & main breaker", "y", "—", "—", "—", "—"],
- ["Siemens 400A meter combo option (MC0816B1400RLTM)", "o — ask Sharma", "—", "—", "—", "—"],
- ["New breakers throughout", "y", "—", "—", "—", "o — as needed"],
- ["GFCI breakers — range (QF240A) & dryer (Q230GF)", "y", "—", "—", "—", "—"],
- ["Grounding checked & brought to code", "y", "—", "—", "—", "o"],
- ["Whole-home surge protection at the panel", "y", "y", "—", "o — ask Sharma", "—"],
- ["GFCI receptacles — kitchen / bath / garage / outside", "o — ask Sharma", "y", "—", "—", "o"],
- ["Tamper-resistant (TR) receptacles", "o — ask Sharma", "y", "—", "—", "—"],
- ["Hardwired, interconnected smoke detectors", "o — ask Sharma", "y", "—", "—", "—"],
- ["Carbon monoxide (CO) detectors", "o — ask Sharma", "y", "—", "—", "—"],
- ["Guide-light outlets — halls & baths", "—", "y", "o — ask Sharma", "—", "—"],
- ["Recessed LED lighting", "—", "—", "y", "—", "—"],
- ["Pendant lights — island & dining", "—", "—", "y", "—", "—"],
- ["Ceiling fan install — fan-rated box", "—", "—", "y", "—", "o"],
- ["Dimmers, smart switches & fan controls", "—", "—", "y", "—", "—"],
- ["Outdoor & landscape lighting", "—", "—", "y", "—", "—"],
- ["240V EV charger circuit — Level 2 (50A)", "o — ask Sharma", "—", "—", "y", "—"],
- ["NEMA 14-50 receptacle or hardwired charger", "—", "—", "—", "y", "—"],
- ["Generator inlet box (50A) + panel interlock", "o — ask Sharma", "—", "—", "y", "—"],
- ["Dedicated circuits — range / dryer / HVAC / pool", "y", "—", "—", "y", "o"],
- ["Dead outlet / dead circuit tracing", "—", "o", "—", "—", "y"],
- ["Tripping breaker — cause found & fixed", "o", "—", "—", "—", "y"],
- ["Burning smell / buzzing / sparking made safe", "—", "o", "—", "—", "y"],
- ["Every breaker labeled + circuit directory", "y", "y", "—", "o", "o"],
- ["Panel capacity confirmed on site by Sharma", "y", "y", "—", "y", "y"],
- ["Overhead service — power company disconnect / reconnect coordinated", "y", "—", "—", "—", "o"],
- ["Overhead service mast / weatherhead repair or replacement", "y", "—", "—", "—", "y"],
- ["Permit & inspection handled by Sharma", "y", "o", "o", "y", "o"]
+ ["New Siemens 200A panel & main breaker", "✓", "—", "—", "—", "—"],
+ ["Siemens 400A meter combo option (MC0816B1400RLTM)", "○ — ask Sharma", "—", "—", "—", "—"],
+ ["New breakers throughout", "✓", "—", "—", "—", "○ — as needed"],
+ ["GFCI breakers — range (QF240A) & dryer (Q230GF)", "✓", "—", "—", "—", "—"],
+ ["Grounding checked & brought to code", "✓", "—", "—", "—", "○"],
+ ["Whole-home surge protection at the panel", "✓", "✓", "—", "○ — ask Sharma", "—"],
+ ["GFCI receptacles — kitchen / bath / garage / outside", "○ — ask Sharma", "✓", "—", "—", "○"],
+ ["Tamper-resistant (TR) receptacles", "○ — ask Sharma", "✓", "—", "—", "—"],
+ ["Hardwired, interconnected smoke detectors", "○ — ask Sharma", "✓", "—", "—", "—"],
+ ["Carbon monoxide (CO) detectors", "○ — ask Sharma", "✓", "—", "—", "—"],
+ ["Guide-light outlets — halls & baths", "—", "✓", "○ — ask Sharma", "—", "—"],
+ ["Recessed LED lighting", "—", "—", "✓", "—", "—"],
+ ["Pendant lights — island & dining", "—", "—", "✓", "—", "—"],
+ ["Ceiling fan install — fan-rated box", "—", "—", "✓", "—", "○"],
+ ["Dimmers, smart switches & fan controls", "—", "—", "✓", "—", "—"],
+ ["Outdoor & landscape lighting", "—", "—", "✓", "—", "—"],
+ ["240V EV charger circuit — Level 2 (50A)", "○ — ask Sharma", "—", "—", "✓", "—"],
+ ["NEMA 14-50 receptacle or hardwired charger", "—", "—", "—", "✓", "—"],
+ ["Generator inlet box (50A) + panel interlock", "○ — ask Sharma", "—", "—", "✓", "—"],
+ ["Dedicated circuits — range / dryer / HVAC / pool", "✓", "—", "—", "✓", "○"],
+ ["Dead outlet / dead circuit tracing", "—", "○", "—", "—", "✓"],
+ ["Tripping breaker — cause found & fixed", "○", "—", "—", "—", "✓"],
+ ["Burning smell / buzzing / sparking made safe", "—", "○", "—", "—", "✓"],
+ ["Every breaker labeled + circuit directory", "✓", "✓", "—", "○", "○"],
+ ["Panel capacity confirmed on site by Sharma", "✓", "✓", "—", "✓", "✓"],
+ ["Overhead service — power company disconnect / reconnect coordinated", "✓", "—", "—", "—", "○"],
+ ["Overhead service mast / weatherhead repair or replacement", "✓", "—", "—", "—", "✓"],
+ ["Permit & inspection handled by Sharma", "✓", "○", "○", "✓", "○"]
 ];
 var CATS=[
- {name:"Panels, Breakers & Surge — Start Here",short:"Panels & breakers",sub:"Everything starts at the panel. These are the Siemens panels and breakers Sharma specs in its own drawings — plus the surge protection Florida homes need.",items:[
-  ["Siemens 200A panel upgrade — the panel Sharma installs","A new Siemens 200A panel with a 200A main breaker and room to grow — the swap for fuse boxes, tired 100A panels and panels with no spaces left. Sharma's own drawings spec Siemens PN-series panels. New breakers throughout, everything labeled, permit and inspection handled by Sharma.","Panel Upgrade package"],
+ {name:"Panels, Breakers & Surge ★ Start Here",short:"Panels & breakers",sub:"Everything starts at the panel. These are the Siemens panels and breakers Sharma specs in its own drawings — plus the surge protection Florida homes need.",items:[
+  ["★ Siemens 200A panel upgrade — the panel Sharma installs","A new Siemens 200A panel with a 200A main breaker and room to grow — the swap for fuse boxes, tired 100A panels and panels with no spaces left. Sharma's own drawings spec Siemens PN-series panels. New breakers throughout, everything labeled, permit and inspection handled by Sharma.","Panel Upgrade package"],
   ["Siemens 400A meter combo — MC0816B1400RLTM","For large homes and heavy loads: a Siemens 400A meter main combo outside feeding two 200A Siemens panels inside — the exact service in Sharma's recent Tampa home drawings. Sharma confirms on site whether your home needs 200A or 400A.","Panel Upgrade package — bigger-service option"],
   ["Siemens GFCI breakers — range & dryer","Sharma's drawings put the range on a Siemens QF240A GFCI breaker and the dryer on a Q230GF — two-pole GFCI protection for the two biggest 240V appliances in the house.","Panel Upgrade package"],
   ["Whole-home surge protection — at the panel","One device at the panel that clamps the voltage spikes Florida lightning and utility switching send into your home — guarding the fridge, the AC, TVs, computers and everything else at once. A power strip only protects what's plugged into it; this protects the house.","Panel Upgrade & Safety packages"],
@@ -721,7 +661,7 @@ var CATS=[
   ["Dimmers & smart switches","LED-compatible dimmers that don't flicker or buzz — and smart switches if you want schedules or phone control, the same class of lighting control in Sharma's smart home packet.","Lighting & Fans package"],
   ["Outdoor & landscape lighting","Low-voltage path lights and accent spots that make the home look its best after dark and keep walkways safe — on a timer or dusk-to-dawn control, so you never think about them.","Lighting & Fans package"] ]},
  {name:"EV, Generator & Dedicated Circuits",short:"EV & generator",sub:"The new big loads. A 240V circuit charges an EV overnight; an inlet and interlock make a portable generator safe; dedicated circuits keep big appliances off each other's breakers.",items:[
-  ["Level 2 EV charger circuit — 240V / 50A","A dedicated 240V, 50A circuit from your panel to where you park. Level 2 charging adds roughly 25–40 miles of range per hour — a full charge overnight instead of days on a regular outlet. Sharma confirms your panel can carry it at the quote visit.","EV & Generator package"],
+  ["★ Level 2 EV charger circuit — 240V / 50A","A dedicated 240V, 50A circuit from your panel to where you park. Level 2 charging adds roughly 25–40 miles of range per hour — a full charge overnight instead of days on a regular outlet. Sharma confirms your panel can carry it at the quote visit.","EV & Generator package"],
   ["NEMA 14-50 EV receptacle","The heavy-duty 240V outlet many chargers plug into — industrial-grade and weather-resistant rated, mounted where the car parks. Choose this if your charger has a plug; choose hardwired if it doesn't.","EV & Generator package"],
   ["Generator inlet box — 50A","A weatherproof inlet on the outside wall. The generator stays outside where it belongs, its cord plugs in outside, and power comes in through the panel — no extension cords through cracked windows or doors.","EV & Generator package"],
   ["Panel interlock kit","A mechanical slide on the panel that makes it physically impossible for the generator and the utility to power the panel at the same time. It protects your home, your generator — and the line crews working to restore your power.","EV & Generator package"],
@@ -763,7 +703,7 @@ var CZCHOICES=[
 
 <script>
 var GUIDE=[
- {title:"Find Your Exterior Main Shut-Off",scene:"Do this once, before you ever need it",cat:0,img:"assets/img-3b98c4f21cc5.webp",alt:"Electric meters and exterior disconnect boxes mounted on the outside wall of a home — where the main shut-off lives",getq:"panel",
+ {title:"★ Find Your Exterior Main Shut-Off",scene:"Do this once, before you ever need it",cat:0,img:"assets/img-3b98c4f21cc5.webp",alt:"Electric meters and exterior disconnect boxes mounted on the outside wall of a home — where the main shut-off lives",getq:"panel",
   what:"Somewhere outside your home — at the meter, or in a meter combo box like the services Sharma installs — there should be one main breaker that shuts off ALL power to the house. Look for a breaker marked SERVICE DISCONNECT or MAIN. That switch is for the worst moments: a burning smell at the panel, sparking, flooding near electrical equipment, or a fire crew needing your power dead before they work. Knowing where it is — and that it works — is the single most useful electrical fact about your home.",
   why:["Where to look: the meter base or meter combo on the outside wall, or a disconnect box right next to it — like the boxes under the meters in the photo. The breaker is usually larger than the others and labeled SERVICE DISCONNECT.","Make it a household fact: everyone who lives in the home should know where this switch is and what it does — in a real emergency there is no time to go looking for it.","Flip it once a year so it doesn't seize up — a main that won't move in an emergency is no main at all.","No exterior disconnect at all? Current code — the NEC (NFPA 70), NFPA and your local ordinances — calls for an exterior emergency/service disconnect so first responders can kill power from outside. If your home doesn't have one, it's likely not up to current code — it predates the requirement — and the right move is to bring the house up to code: have Sharma install an exterior service disconnect, usually as part of panel or service work."],
   callout:"<b>Your 2-minute homework:</b> walk outside, find the meter, and look for the breaker marked <b>SERVICE DISCONNECT</b>. Found it? You're set. Nothing there? Put a panel/service visit on your list — and ask Sharma about adding an exterior disconnect.",
@@ -852,68 +792,604 @@ var GUIDE=[
    ["Tamper-resistant outlets are a gimmick that just makes plugs hard to insert.","Myth — the shutters open only when a real plug pushes both slots evenly, which a child's key or fork can't do. They're the code standard in homes today because they quietly prevent shocks."]],
   pkgs:"Good to know"}
 ];
-var GACC=[["#2563a8","#8fbde9","#fff"],["#2563a8","#8fbde9","#fff"],["#2e7d6b","#8fd0bd","#fff"],["#476c7d","#a9c6d2","#fff"],["#476c7d","#a9c6d2","#fff"],["#0e7c86","#93d5dc","#fff"],["#c2431f","#f09a7e","#fff"],["#2563a8","#8fbde9","#fff"],["#2563a8","#8fbde9","#fff"],["#2e7d6b","#8fd0bd","#fff"],["#476c7d","#a9c6d2","#fff"],["#7a4f21","#e8c893","#fff"],["#16233a","#f5b841","#fff"],["#2e7d6b","#8fd0bd","#fff"]];
+var GACC=[["#2563a8","#8fbde9","#fff"],["#e86a10","#ffa25e","#fff"],["#2e7d6b","#8fd0bd","#fff"],["#476c7d","#a9c6d2","#fff"],["#d99a16","#f5b841","#16233a"],["#0e7c86","#93d5dc","#fff"],["#c2431f","#f09a7e","#fff"],["#2563a8","#8fbde9","#fff"],["#e86a10","#ffa25e","#fff"],["#2e7d6b","#8fd0bd","#fff"],["#476c7d","#a9c6d2","#fff"],["#7a4f21","#e8c893","#fff"],["#16233a","#f5b841","#fff"],["#2e7d6b","#8fd0bd","#fff"]];
 </script>
 
-<script>var state={pkg:null,adds:{},cat:0,query:"",lv:!1,quiz:{reason:"",detail:"",location:"",panel:"",service:"",home:"",additions:"",timeline:""}};function $(e){return document.getElementById(e)}function toast(e){var t=$("toast");t.textContent=e,t.classList.add("show"),setTimeout(function(){t.classList.remove("show")},2400)}function esc(e){return e.replace(/&/g,"&amp;").replace(/</g,"&lt;")}var tabReady={},tabLoading={},tabCallbacks={};function loadTabData(e,t,a){if(tabReady[e])a&&a();else if(tabLoading[e])tabCallbacks[e].push(a);else{tabLoading[e]=1,tabCallbacks[e]=[a];var o=document.createElement("script");o.src=t,o.onload=function(){tabReady[e]=1;var t=tabCallbacks[e];tabCallbacks[e]=[],t.forEach(function(e){e&&e()})},o.onerror=function(){tabLoading[e]=0,tabCallbacks[e]=[],a&&a()},document.head.appendChild(o)}}function ensureProducts(e){window.__prodReal?e&&e():loadTabData("products","lazy-products.js",function(){initProducts(),e&&e()})}function ensureCustomize(e){window.__czReal?e&&e():ensureProducts(function(){loadTabData("customize","lazy-customize.js",function(){e&&e()})})}function ensureLearn(e){tabReady.learn?e&&e():ensureProducts(function(){loadTabData("learn","lazy-learn.js",function(){initGuide(),e&&e()})})}function ensureCompare(e){tabReady.compare?e&&e():loadTabData("compare","lazy-compare.js",e)}var __prodReal=null,__setCatReal=null,__czReal=null;function renderProds(){__prodReal?__prodReal():ensureProducts(function(){__prodReal&&__prodReal()})}function setCat(e){__setCatReal?__setCatReal(e):ensureProducts(function(){__setCatReal&&__setCatReal(e)})}function renderCz(){__czReal?__czReal():ensureCustomize(function(){__czReal&&__czReal()})}function switchView(e){document.querySelectorAll("[data-view]").forEach(function(t){t.classList.toggle("on",t.getAttribute("data-view")===e)})}function scrollToViewTop(){var e=$("topMenu"),t=e?e.offsetHeight:60,a=document.querySelector("main");if(a){var o=a.getBoundingClientRect().top+(window.scrollY||window.pageYOffset||0)-t-2;o<0&&(o=0);try{window.scrollTo({top:o,left:0,behavior:"auto"})}catch(e){window.scrollTo(0,o)}}}function goToView(e){switchView(e),window.__skRoute?window.__skRoute(e):scrollToViewTop()}function showView(e){goToView(e)}function renderPkgs(){$("pkgGrid").innerHTML=PACKAGES.map(function(e){return'<article class="pkg'+(e.pop?" pop":"")+'" id="pkg-'+e.id+'">'+(e.pop?'<span class="badge-pop">'+STAR_ICON+" Most common upgrade</span>":"")+'<img loading="lazy" class="pkg-img" src="'+PKGIMG[e.id]+'" alt="'+PKGALT[e.id]+'"/>'+pkgRow(e.id)+'<div class="body">'+pkgBadge(e.id)+'<div class="tier">'+e.tier+"</div><h3>"+e.name+'</h3><p class="for">'+e.for+'</p><span class="count">'+e.count+'</span><p class="bestfor"><b>Decide:</b> '+PKGBEST[e.id]+'</p><p class="whyline"><b>Why it matters:</b> '+PKGWHY[e.id]+'</p><div class="spacer"></div><button class="link-btn" type="button" data-details="'+e.id+'">See all items →</button><button class="btn btn-primary pick-btn" type="button" data-pick="'+e.id+'" aria-pressed="false">Choose this package</button></div></article>'}).join(""),document.querySelectorAll("[data-pick]").forEach(function(e){e.addEventListener("click",function(){var t=e.getAttribute("data-pick");state.pkg=state.pkg===t?null:t,state.pkg&&cz.base&&(cz.base="",cz.removed={},cz.choices={},renderCz()),renderSel();var a=PACKAGES.filter(function(e){return e.id===state.pkg})[0];toast(a?"Added: "+a.name:"Package removed")})}),document.querySelectorAll("[data-details]").forEach(function(e){e.addEventListener("click",function(){openPkgSheet(e.getAttribute("data-details"))})}),renderSel()}function openSheet(e){$("sheetBody").innerHTML=e,$("sheetBody").scrollTop=0;var t=$("sheetWrap");t.setAttribute("aria-hidden","false"),window.SK&&SK.openSheet?SK.openSheet("sheetWrap"):t.classList.add("is-open")}function closeSheet(){var e=$("sheetWrap");e.setAttribute("aria-hidden","true"),window.SK&&SK.closeSheet?SK.closeSheet("sheetWrap"):e.classList.remove("is-open")}document.querySelectorAll("[data-view]").forEach(function(e){e.addEventListener("click",function(){goToView(e.getAttribute("data-view"))})}),$("btnDetails").addEventListener("click",function(){showView("products")}),$("sheetClose").addEventListener("click",closeSheet),document.addEventListener("keydown",function(e){"Escape"===e.key&&closeSheet()});var CHECK_ICON='<svg class="sk-icon icon-inline" aria-hidden="true"><use href="#i-check"/></svg>',PLUS_ICON='<svg class="sk-icon icon-inline" aria-hidden="true"><use href="#i-plus"/></svg>',STAR_ICON='<svg class="sk-icon icon-inline" aria-hidden="true"><use href="#i-star"/></svg>';function cellHTML(e){return 0===e.indexOf("y")?CHECK_ICON+e.slice(1):0===e.indexOf("o")?PLUS_ICON+e.slice(1):e}function pkgHighlights(e){var t=PACKAGES.indexOf(e),a=[];return COMPARE.forEach(function(e){0===e[t+1].indexOf("y")&&a.push(e[0])}),a}function openPkgSheet(e){var t=PACKAGES.filter(function(t){return t.id===e})[0],a=state.pkg===e,o=pkgHighlights(t);openSheet('<div style="font-size:13px;font-weight:700;letter-spacing:.14em;color:var(--muted);text-transform:uppercase">'+t.tier+"</div><h2>"+t.name+'</h2><p class="sub">'+t.for+" · "+t.count+'</p><img loading="lazy" class="pkg-photo" src="'+PKGIMG[t.id]+'" alt="'+PKGALT[t.id]+'"/><p class="sub" style="margin-bottom:4px"><b style="color:var(--ink)">Decide:</b> '+PKGBEST[t.id]+'</p><p class="sub" style="margin-bottom:4px"><b style="color:var(--sk-tint)">Why it matters:</b> '+PKGWHY[t.id]+'</p><h3 class="mini">In plain English</h3><ul class="hl">'+t.bullets.map(function(e){return"<li>"+e+"</li>"}).join("")+'</ul><h3 class="mini">Everything included</h3><ul class="items">'+t.items.map(function(e){return"<li>"+e+"</li>"}).join("")+"</ul>"+(o.length?'<h3 class="mini">At a glance</h3><ul class="hl">'+o.map(function(e){return"<li>"+e+"</li>"}).join("")+"</ul>":"")+'<p class="sub">Sharma confirms the final scope — and your panel capacity and sizing — on site at the quote visit, then quotes the work.</p><button class="btn btn-primary" style="width:100%" type="button" id="sheetPick">'+(a?CHECK_ICON+" Selected — tap to remove":"Choose this package")+"</button>"),$("sheetPick").addEventListener("click",function(){state.pkg=a?null:e,state.pkg&&cz.base&&(cz.base="",cz.removed={},cz.choices={},renderCz()),renderSel(),closeSheet(),toast(state.pkg?"Added: "+t.name:"Package removed")})}function prodName(e){var t=e.split("-");return CATS[+t[0]].items[+t[1]][0]}function selCount(){return(state.pkg?1:0)+(cz.base?1:0)+Object.keys(state.adds).length}function renderSel(){PACKAGES.forEach(function(e){var t=$("pkg-"+e.id);if(t){var a=t.querySelector("[data-pick]"),o=state.pkg===e.id;t.classList.toggle("selected",o),a.setAttribute("aria-pressed",o?"true":"false"),a.textContent=o?"Selected — tap to remove":"Choose this package",a.classList.toggle("added",o)}});var e=selCount();$("barCount").textContent=e;var t="My list is empty";if(cz.base)t="scratch"===cz.base?"Custom — from scratch":"Custom — based on "+czPkg().name+(Object.keys(state.adds).length?" + extras":"");else if(state.pkg){t=PACKAGES.filter(function(e){return e.id===state.pkg})[0].name+(Object.keys(state.adds).length?" + extras":"")}else e&&(t="Options only — no package yet");$("barLabel").textContent=t}function selListHTML(){var e="";if(cz.base){var t=czSummary();if("scratch"===cz.base)e+='<div class="sel-item"><div><b>CUSTOM — BUILT FROM SCRATCH</b><small>Tell Sharma about your home below — we\'ll recommend the right work to match.</small></div><button class="x2" type="button" data-rm-cz>Remove</button></div>';else{var a=czPkg();e+='<div class="sel-item"><div><b>CUSTOM — based on '+a.name+"</b><small>"+t.kept.length+" of "+a.items.length+" items kept</small>"+(t.removed.length?"<small>Removed: "+t.removed.map(esc).join("; ")+"</small>":"")+(t.choices.length?"<small>Your answers: "+t.choices.map(esc).join("; ")+"</small>":"")+'</div><button class="x2" type="button" data-rm-cz>Remove</button></div>'}}if(state.pkg){var o=PACKAGES.filter(function(e){return e.id===state.pkg})[0];e+='<div class="sel-item"><div><b>PACKAGE: '+o.name+"</b><small>"+o.count+" · "+o.for+'</small></div><button class="x2" type="button" data-rm-pkg>Remove</button></div>'}return Object.keys(state.adds).forEach(function(t){e+='<div class="sel-item"><div>'+esc(prodName(t))+(state.adds[t]>1?" × "+state.adds[t]:"")+'</div><button class="x2" type="button" data-rm="'+t+'">Remove</button></div>'}),e||(e='<div class="sel-empty">Nothing picked yet — choose a package or add options, then come back here.</div>'),e}function openListSheet(){openSheet('<h2>My electrical list</h2><p class="sub">Nothing is ordered yet — this list goes to Sharma. We check your panel and the work at your home, then price it and confirm next steps.</p><div id="sheetSelList">'+selListHTML()+'</div><form class="client" id="clientForm" onsubmit="return false"><label>Your name *<input id="fName" autocomplete="name" placeholder="Full name"/></label><label>Phone<input id="fPhone" autocomplete="tel" placeholder="(407) 555-0123"/></label><label>Home address<input id="fHome" placeholder="Street, city"/></label><label>Best time to call<input id="fBestTime" placeholder="e.g. Weekday mornings, or after 5pm"/></label><label class="full">Anything urgent?<select id="fUrgency"><option>No — planning a project</option><option>No power to part of the home</option><option>A breaker keeps tripping</option><option>Burning smell or sparking — please call me back fast</option><option>Detectors are beeping / alarming</option></select></label><label class="full">Notes (optional)<textarea id="fNotes" rows="2" placeholder="What is happening at home — the rooms, the problem, what you would like changed"></textarea></label><p class="full" style="font-size:13px;color:var(--muted);margin:2px 0 0">Optional: a photo of your breaker panel (door open) helps Sharma come prepared — we may ask you to text one after we call.</p><button type="button" class="lv-line full'+(state.lv?" on":"")+'" id="lvLine"><span class="lv-box">'+(state.lv?CHECK_ICON:"")+'</span><span><b>Also price my low voltage / smart home options</b><span>Adding lights, switches or outlets? Sharma also does low-voltage smart home work — smart lighting, doorbells, cameras and more (see the Smart Home Picker). Tick this and Sharma prices those options with your electrical work.</span></span></button></form><div class="actions"><button class="btn btn-primary" id="btnSubmit" type="button">Send my list to Sharma</button><button class="btn btn-navy" id="btnCopy" type="button">Copy</button><button class="btn btn-outline" id="btnDownload" type="button">Download</button><button class="btn btn-outline" id="btnClear" type="button">Clear all</button></div><div class="submit-status" id="submitStatus" role="status" aria-live="polite" hidden></div><p style="font-size:13px;color:var(--muted);margin-top:10px">Tap <b>Send my list to Sharma</b> and it goes straight to Sharma Electric &amp; HVAC from this page — no email app needed. <b>Sharma will call you back.</b> FL Lic. EC13013924 / CAC1823596. Or call <a href="tel:+14078819076">407 881 9076</a>.</p>'),bindSheetList();var e=$("lvLine");e&&e.addEventListener("click",function(){state.lv=!state.lv,e.classList.toggle("on",state.lv),e.querySelector(".lv-box").innerHTML=state.lv?CHECK_ICON:"",toast(state.lv?"Added: Sharma will also price low-voltage / smart home options":"Removed the low-voltage / smart home pricing request")})}function bindSheetList(){var e=document.querySelector("[data-rm-pkg]");e&&e.addEventListener("click",function(){state.pkg=null,renderSel(),refreshSheetList()});var t=document.querySelector("[data-rm-cz]");t&&t.addEventListener("click",function(){cz.base="",cz.removed={},cz.choices={},renderCz(),renderSel(),refreshSheetList()}),document.querySelectorAll("[data-rm]").forEach(function(e){e.addEventListener("click",function(){delete state.adds[e.getAttribute("data-rm")],renderSel(),renderProds(),refreshSheetList()})}),$("btnSubmit").addEventListener("click",onSubmit),$("btnCopy").addEventListener("click",onCopy),$("btnDownload").addEventListener("click",onDownload),$("btnClear").addEventListener("click",function(){state.pkg=null,state.adds={},state.lv=!1;var e=$("lvLine");e&&(e.classList.remove("on"),e.querySelector(".lv-box").textContent=""),cz.base="",cz.removed={},cz.choices={},submitState.sent=!1,submitState.sending=!1;var t=$("btnSubmit");t&&(t.disabled=!1,t.textContent="Send my list to Sharma",t.classList.remove("added"));var a=$("submitStatus");a&&(a.hidden=!0,a.textContent=""),renderCz(),renderSel(),renderProds(),refreshSheetList(),toast("List cleared")})}function refreshSheetList(){var e=$("sheetSelList");e&&(e.innerHTML=selListHTML()),bindSheetList()}function buildText(){var e=[];if(e.push("SHARMA ELECTRIC & HVAC — HOME ELECTRICAL REQUEST"),e.push("From: Electrical Picker (homeowner — upgrades & service)"),e.push(""),$("fName").value.trim()&&e.push("Name: "+$("fName").value.trim()),$("fPhone").value.trim()&&e.push("Phone: "+$("fPhone").value.trim()),$("fHome").value.trim()&&e.push("Home address: "+$("fHome").value.trim()),$("fBestTime")&&$("fBestTime").value.trim()&&e.push("Best time to call: "+$("fBestTime").value.trim()),$("fUrgency")&&$("fUrgency").value&&e.push("Urgency: "+$("fUrgency").value),state.lv&&e.push("ALSO PRICE: Low voltage / smart home options — yes, price those with this work."),state.quiz.reason&&e.push("Questionnaire — why they came: "+state.quiz.reason),state.quiz.detail&&e.push("Questionnaire — details: "+state.quiz.detail),state.quiz.location&&e.push("Questionnaire — where in the home: "+state.quiz.location),state.quiz.panel&&e.push("Questionnaire — their panel: "+state.quiz.panel),state.quiz.service&&e.push("Questionnaire — how power reaches the home: "+state.quiz.service),state.quiz.home&&e.push("Questionnaire — home age: "+state.quiz.home),state.quiz.additions&&e.push("Questionnaire — new big loads: "+state.quiz.additions),state.quiz.timeline&&e.push("Questionnaire — how soon: "+state.quiz.timeline),e.push(""),cz.base){var t=czSummary();if("scratch"===cz.base)e.push("CUSTOM — BUILT FROM SCRATCH"),e.push("The options below are the request. Please recommend the right work to match."),e.push("");else{var a=czPkg();e.push("CUSTOM — based on "+a.name),e.push("Items kept ("+t.kept.length+" of "+a.items.length+"):"),t.kept.forEach(function(t){e.push("  • "+t)}),t.removed.length&&(e.push("Removed by homeowner:"),t.removed.forEach(function(t){e.push("  − "+t)})),t.choices.length&&(e.push("Homeowner answers:"),t.choices.forEach(function(t){e.push("  • "+t)})),e.push("")}}if(state.pkg){var o=PACKAGES.filter(function(e){return e.id===state.pkg})[0];e.push("PACKAGE: "+o.name+" ("+o.count+")"),o.items.forEach(function(t){e.push("  • "+t)}),e.push("")}var s=Object.keys(state.adds);return s.length&&(e.push("ADDITIONAL OPTIONS:"),s.forEach(function(t){e.push("  • "+prodName(t)+(state.adds[t]>1?" × "+state.adds[t]:""))}),e.push("")),$("fNotes").value.trim()&&(e.push("NOTES:"),e.push($("fNotes").value.trim()),e.push("")),e.push("Please confirm panel capacity and sizing at my home, price this work, and confirm next steps."),e.join("\n")}$("btnOpenList").addEventListener("click",openListSheet);var submitState={sending:!1,sent:!1};function setSubmitStatus(e,t){var a=$("submitStatus");a&&(a.hidden=!1,a.className="submit-status "+e,a.textContent=t)}function onSubmit(){if(!submitState.sending)if(submitState.sent)toast("This list was already sent to Sharma");else if(selCount()){if(!$("fName").value.trim())return toast("Add your name so Sharma knows who this is from"),void $("fName").focus();var e=$("btnSubmit"),t=$("fName").value.trim(),a={_subject:"Electrical Picker selections — "+t,_template:"table",_captcha:"false",Name:t,Phone:$("fPhone").value.trim(),"Home address":$("fHome").value.trim(),"Best time to call":$("fBestTime").value.trim(),Urgency:$("fUrgency").value,"Also price low voltage / smart home options":state.lv?"Yes":"No","Questionnaire — why they came":state.quiz.reason,"Questionnaire — details":state.quiz.detail,"Questionnaire — where in the home":state.quiz.location,"Questionnaire — their panel":state.quiz.panel,"Questionnaire — how power reaches the home":state.quiz.service,"Questionnaire — home age":state.quiz.home,"Questionnaire — new big loads":state.quiz.additions,"Questionnaire — how soon":state.quiz.timeline,Notes:$("fNotes").value.trim(),Selections:buildText()};submitState.sending=!0,e&&(e.disabled=!0,e.textContent="Sending…");var o=$("submitStatus");o&&(o.hidden=!0,o.textContent=""),fetch("https://formsubmit.co/ajax/office@sharmaelectric.com",{method:"POST",headers:{"Content-Type":"application/json",Accept:"application/json"},body:JSON.stringify(a)}).then(function(e){return e.json().catch(function(){return{}}).then(function(t){if(!e.ok||t&&void 0!==t.success&&"true"!==String(t.success))throw new Error("submit failed");return t})}).then(function(){submitState.sending=!1,submitState.sent=!0,e&&(e.disabled=!0,e.textContent="Sent to Sharma",e.classList.add("added")),setSubmitStatus("ok","Thank you — you're in. Sharma Electric & HVAC will call you back to book your quote visit. If anything is sparking or smells like burning in the meantime, call 407 881 9076 right away — and 911 if you see flames or smoke."),toast("Sent — Sharma will call you back");var t=$("barLabel");t&&(t.textContent=t.textContent+" · Sent to Sharma")}).catch(function(){submitState.sending=!1,e&&(e.disabled=!1,e.textContent="Send my list to Sharma"),setSubmitStatus("err","Sorry — your list didn't send. Your list is still here and nothing was lost. Check your connection and tap Send again, or use Copy or Download below and share it with Sharma that way. You can also call 407 881 9076."),toast("Didn't send — your list is still here. Try again, or use Copy / Download.")})}else toast("Pick a package or an option first")}function onCopy(){if(selCount()){var e=buildText();navigator.clipboard&&navigator.clipboard.writeText?navigator.clipboard.writeText(e).then(function(){toast("List copied — paste it anywhere")},function(){fallbackCopy(e)}):fallbackCopy(e)}else toast("Pick a package or an option first")}function fallbackCopy(e){var t=document.createElement("textarea");t.value=e,document.body.appendChild(t),t.select();try{document.execCommand("copy"),toast("List copied")}catch(e){toast("Copy didn't work — use Download instead")}document.body.removeChild(t)}function onDownload(){if(selCount()){var e=new Blob([buildText()],{type:"text/plain"}),t=document.createElement("a");t.href=URL.createObjectURL(e),t.download="my-electrical-list.txt",document.body.appendChild(t),t.click(),document.body.removeChild(t),setTimeout(function(){URL.revokeObjectURL(t.href)},2e3),toast("Downloaded your list")}else toast("Pick a package or an option first")}var cz={base:"",removed:{},choices:{}};function czPkg(){return PACKAGES.filter(function(e){return e.id===cz.base})[0]||null}function czCatOf(e){var t=e.toLowerCase();return/dead outlet|dead room|keeps tripping|flickering|burning smell|stopped working|wobbles|half the house|switch, outlet or fixture that/.test(t)?4:/ev charger|14-50|generator|interlock|dedicated circuit/.test(t)?3:/recessed|pendant|ceiling fan|fan & light|dimmer|smart switch|landscape|fixture swap|legrand|smart home/.test(t)?2:/gfci receptacle|tamper|smoke|carbon monoxide|guide-light|outlet & switch check|usb/.test(t)?1:0}function czChoicesFor(e){return CZCHOICES.filter(function(t){return t.pkgs.indexOf(e)>=0})}function czSummary(){var e=czPkg(),t={kept:[],removed:[],choices:[]};return e&&e.items.forEach(function(e){(cz.removed[e]?t.removed:t.kept).push(e)}),czChoicesFor(cz.base).forEach(function(e){cz.choices[e.key]&&t.choices.push(e.label.split(" — ")[0].split(" (")[0]+": "+cz.choices[e.key])}),t}var DETAIL_SETS={problem:{label:"What's happening?",help:"Pick the symptom that fits best — Sharma traces faults to the cause, not just the symptom.",opts:[["Dead outlet, switch or whole room — no power","Dead outlet or whole room"],["Breaker keeps tripping","Breaker keeps tripping"],["Lights flicker or dim when the AC or appliances start","Lights flicker or dim"],["Burning smell, buzzing, sparking or warm outlets","Burning smell / buzzing / sparking"],["Half the house or the whole house lost power","Half / whole house out"]]},panel:{label:"What's going on with the panel?",help:"Panel problems usually show up as trips, no room to add circuits, or an old fuse box.",opts:[["Breakers trip when several things run together","Trips when things run together"],["Panel is full — no empty breaker spaces to add anything","Full — no spaces left"],["Fuse box or old panel — I know it needs replacing","Fuse box / old panel"],["Panel buzzes, feels warm, or breakers look worn","Buzzing / warm / worn"],["Not sure what is wrong with the panel — it just seems old","Not sure — it just seems old"]]},add:{label:"What do you want to add?",help:"New big loads each need their own circuit — and a panel that can carry them.",opts:[["Level 2 EV charger in the garage","EV charger"],["Generator inlet and interlock for backup power","Generator backup"],["A big new load — hot tub, pool, workshop or second AC","Hot tub / pool / workshop / 2nd AC"],["A dedicated circuit for an appliance","Dedicated circuit for an appliance"],["Whole-home surge protection","Surge protection"],["Outlets & switches replaced or added","Outlets & switches"],["Not sure yet — I just know I need more power","Not sure — I need more power"]]},lighting:{label:"What kind of lighting or fan work?",help:"Tell us the project — layout and the right boxes matter more than the fixture itself.",opts:[["Recessed LED lighting for a room","Recessed lighting"],["Pendant lights over an island or table","Pendants"],["Ceiling fan installed or replaced","Ceiling fan(s)"],["Dimmers or smart switches","Dimmers / smart switches"],["Outdoor or landscape lighting","Outdoor / landscape lighting"]]},safety:{label:"What safety work matters most?",help:"These are the quiet protections — they only get noticed when they're missing.",opts:[["GFCI outlets in kitchen, baths, garage or outdoors","GFCI outlets"],["Smoke and CO detectors replaced or added","Smoke & CO detectors"],["Whole-home surge protection at the panel","Surge protection"],["Tamper-resistant outlets — young kids at home","Tamper-resistant outlets (kids)"],["All of it — a full safety check and upgrade","All of it — full safety upgrade"]]},planning:{label:"What's the project?",help:"Big projects start at the panel — telling us the plan helps Sharma size it right the first time.",opts:[["Kitchen remodel","Kitchen remodel"],["New room or addition","Room / addition"],["Adding a big load — EV, hot tub, pool or workshop","Adding a big load"],["Whole-home renovation","Whole-home renovation"],["Still deciding — I want advice and a plan","Still deciding — want advice"]]}},quizBranch="";function bindQuizGroup(e){e.querySelectorAll("button").forEach(function(t){t.getAttribute("data-bound")||(t.setAttribute("data-bound","1"),t.addEventListener("click",function(){e.querySelectorAll("button").forEach(function(e){e.classList.toggle("on",e===t)});var a=e.getAttribute("data-q");if(state.quiz[a]=t.getAttribute("data-val"),"reason"===a){var o=t.getAttribute("data-branch")||"";o!==quizBranch&&(quizBranch=o,renderDetailOpts(o))}quizUpdate(),quizMaybeAdvance(a)}))})}function renderDetailOpts(e){var t=DETAIL_SETS[e],a=$("detailOpts");if(a){if(!t)return $("detailLabel").textContent="Tell us a little more",$("detailHelp").textContent="Pick the closest match — this list changes based on your answer to Question 1, so it stays relevant.",a.innerHTML='<span class="q-placeholder">↑ Pick Question 1 first — options appear here</span>',void(state.quiz.detail="");$("detailLabel").textContent=t.label,$("detailHelp").textContent=t.help;var o=state.quiz.detail;t.opts.some(function(e){return e[0]===o})||(state.quiz.detail=""),a.innerHTML=t.opts.map(function(e){return'<button type="button" data-val="'+esc(e[0])+'"'+(e[0]===state.quiz.detail?' class="on"':"")+">"+esc(e[1])+"</button>"}).join(""),bindQuizGroup(a)}}document.querySelectorAll(".q-opts").forEach(bindQuizGroup);var STEPKEYS=[["reason"],["detail"],["location"],["panel","service"],["home","additions"],["timeline"]],wiz={step:1,done:!1};function stepComplete(e){return STEPKEYS[e-1].every(function(e){return!!state.quiz[e]})}function stepsDone(){for(var e=0,t=1;t<=6;t++)stepComplete(t)&&e++;return e}function quizIsDanger(e){return/Burning smell/.test(e.detail)||/whole house lost power/.test(e.detail)}function showStep(){document.querySelectorAll(".q-step").forEach(function(e){e.classList.toggle("on",!wiz.done&&+e.getAttribute("data-step")===wiz.step)});var e=$("qNav");e&&(e.style.display=wiz.done?"none":"flex");var t=$("qBack");t&&(t.disabled=!(wiz.step>1||wiz.done)),t&&(t.textContent=wiz.done?"← Back to my answers":"← Back");var a=$("qNext");a&&(a.disabled=!stepComplete(wiz.step),a.textContent=6===wiz.step?"See my match →":"Continue →");var o=$("qpFill"),s=$("qpText");o&&(o.style.width=Math.round((wiz.done?6:stepsDone())/6*100)+"%"),s&&(s.textContent=wiz.done?"Done — here's your match":"Question "+wiz.step+" of 6")}function quizUpdate(){var e=state.quiz,t=$("quizSafety");if(t)if(quizIsDanger(e)){var a=/whole house lost power/.test(e.detail);t.innerHTML=a?'<b>Whole-home power loss — treat it as urgent.</b> If you see flames or smoke, get out and call <b>911 first</b>. A downed or damaged line outside is the power company\'s — stay well away from it and never touch it. Then call Sharma at <a href="tel:+14078819076">407 881 9076</a>. You can still finish and send your list so we have the details.':'<b>Stop — treat this as urgent.</b> If you can do it without touching anything damaged, switch that circuit off at the breaker. Then call Sharma now at <a href="tel:+14078819076">407 881 9076</a>. If you see flames or smoke, call <b>911 first</b>. You can still finish and send your list so we have the details.',t.classList.add("show")}else t.innerHTML="",t.classList.remove("show");showStep()}function quizMaybeAdvance(e){if(1===STEPKEYS[wiz.step-1].length&&STEPKEYS[wiz.step-1][0]===e&&stepComplete(wiz.step)&&!wiz.done){var t=wiz.step;setTimeout(function(){wiz.step!==t||wiz.done||(wiz.step<6?(wiz.step++,showStep()):(wiz.done=!0,showStep(),renderQuizResult()))},350)}}function quizProds(e,t){var a=[];/EV charger/.test(t.detail)?a=["3-0","3-1"]:/Generator/.test(t.detail)?a=["3-2","3-3"]:/surge/.test(t.detail)?a=["0-3"]:/GFCI/.test(t.detail)?a=["1-0"]:/Smoke and CO/.test(t.detail)?a=["1-2","1-3"]:/Recessed/.test(t.detail)?a=["2-0"]:/Pendant/.test(t.detail)?a=["2-1"]:/Ceiling fan/.test(t.detail)?a=["2-2","2-3"]:/Dimmers/.test(t.detail)?a=["2-4","5-0"]:/Outdoor or landscape/.test(t.detail)?a=["2-5"]:/Outlets & switches/.test(t.detail)?a=["5-0","5-2"]:"panel"===e?a=["0-0","0-3"]:"safety"===e?a=["1-0","1-2","0-3"]:"lighting"===e?a=["2-0","2-2"]:"power"===e?a=["3-0","3-2"]:"repair"===e&&(a=["4-0","4-1"]),/Overhead/.test(t.service)&&("panel"===e||"repair"===e)&&a.indexOf("0-5")<0&&a.push("0-5");var o={},s=[];return a.forEach(function(e){!o[e]&&s.length<3&&(o[e]=1,s.push(e))}),s}function renderQuizResult(){var e=state.quiz,t=$("quizResult");if(t){var a={panel:0,safety:0,lighting:0,power:0,repair:0};/is not working/.test(e.reason)?f("repair",3):/Breakers keep tripping/.test(e.reason)?(f("panel",3),f("repair",1)):/add something/.test(e.reason)?(f("power",2),f("panel",1)):/lighting or ceiling fans/.test(e.reason)?f("lighting",3):/safer/.test(e.reason)?f("safety",3):/remodel/.test(e.reason)&&(f("panel",2),f("lighting",1),f("power",1)),/Dead outlet/.test(e.detail)?f("repair",3):/Breaker keeps tripping/.test(e.detail)?(f("repair",2),f("panel",2)):/flicker/.test(e.detail)?(f("repair",3),f("panel",1)):/Burning smell/.test(e.detail)?f("repair",4):/whole house lost power/.test(e.detail)?(f("repair",4),f("panel",1)):/run together/.test(e.detail)?(f("panel",3),f("repair",1)):/Panel is full/.test(e.detail)||/Fuse box or old panel/.test(e.detail)?f("panel",3):/buzzes/.test(e.detail)?(f("repair",3),f("panel",1)):/just seems old/.test(e.detail)?f("panel",2):/EV charger/.test(e.detail)||/Generator inlet/.test(e.detail)?f("power",3):/big new load/.test(e.detail)?(f("power",2),f("panel",2)):/dedicated circuit/.test(e.detail)?(f("power",2),f("panel",1)):/more power/.test(e.detail)?(f("panel",2),f("power",1)):/Whole-home surge/.test(e.detail)?f("safety",3):/Outlets & switches/.test(e.detail)?(f("safety",1),f("lighting",2)):/Recessed/.test(e.detail)||/Pendant/.test(e.detail)||/Ceiling fan/.test(e.detail)||/Dimmers/.test(e.detail)||/Outdoor or landscape/.test(e.detail)?f("lighting",3):/GFCI outlets/.test(e.detail)||/Smoke and CO/.test(e.detail)||/Tamper-resistant/.test(e.detail)||/full safety/.test(e.detail)?f("safety",3):/Kitchen remodel/.test(e.detail)?(f("lighting",2),f("panel",1),f("safety",1)):/New room/.test(e.detail)?(f("panel",2),f("lighting",1)):/Adding a big load/.test(e.detail)?(f("power",2),f("panel",2)):/Whole-home renovation/.test(e.detail)?(f("panel",2),f("lighting",1),f("safety",1)):/Still deciding/.test(e.detail)&&f("panel",1),/^Kitchen$/.test(e.location)||/Bathroom/.test(e.location)?f("safety",1):/Garage/.test(e.location)?f("power",1):/Outdoors/.test(e.location)?(f("power",1),f("safety",1)):/At the panel/.test(e.location)?f("panel",1):/Several places/.test(e.location)?(f("panel",1),f("safety",1)):/Living areas/.test(e.location)&&f("lighting",1),/Fuse box or 100A/.test(e.panel)?f("panel",2):/^150A/.test(e.panel)?f("panel",1):/but full/.test(e.panel)?f("panel",2):/breakers trip or it looks worn/.test(e.panel)&&(f("panel",1),f("repair",1)),/Overhead/.test(e.service)&&f("panel",1),/before 1990/.test(e.home)?(f("panel",2),f("safety",1)):/1990 to 2010/.test(e.home)&&f("safety",1),/hot tub or pool/.test(e.additions)?(f("power",2),f("panel",2)):/EV charger/.test(e.additions)?(f("power",2),f("panel",1)):/new AC/.test(e.additions)?f("panel",2):/home addition/.test(e.additions)&&(f("panel",2),f("lighting",1)),/Emergency/.test(e.timeline)&&(/is not working/.test(e.reason)||quizIsDanger(e))&&f("repair",2),quizIsDanger(e)&&a.repair<a.panel&&f("repair",a.panel-a.repair+1);var o=Object.keys(a).sort(function(e,t){return a[t]-a[e]}),s=o[0],i=o[1],n=PACKAGES.filter(function(e){return e.id===s})[0],r=PACKAGES.filter(function(e){return e.id===i})[0],l={panel:"A new Siemens 200A panel with new breakers throughout, GFCI protection for the range and dryer, surge protection at the panel, and every circuit labeled. Sharma confirms your capacity and sizing on site — and if your home needs the 400A service instead, you'll hear it there, with the price.",safety:"GFCI outlets where water meets power, tamper-resistant outlets for the living areas, hardwired interconnected smoke and CO detectors, and whole-home surge protection at the panel — the protection a modern Florida home should have, in one visit.",lighting:"Recessed LED laid out for the room, pendants over the island, ceiling fans hung on fan-rated boxes, dimmers and smart switches, and outdoor lighting on a timer. Tell Sharma the rooms in your notes and the layout is designed at the quote visit.",power:"A dedicated 240V / 50A circuit for Level 2 EV charging (14-50 outlet or hardwired), a 50A generator inlet and panel interlock so a portable generator connects safely, and dedicated circuits for other big loads. Sharma checks your panel capacity on site first — and includes a panel upgrade in the price if you need one.",repair:"A troubleshooting visit that finds the actual cause — dead circuits traced, tripping breakers explained, flickers and smells made safe first — then fixes it. Add what's happening in your notes when you send your list, so Sharma comes prepared."},c="Because you came for <b>"+esc(e.reason.toLowerCase())+"</b> — specifically <b>"+esc(e.detail.toLowerCase())+"</b> — this is the package built for exactly that.",d=[];/^Kitchen$/.test(e.location)||/Bathroom/.test(e.location)?d.push("It's in the <b>kitchen or bathroom</b>, where water and power meet — protection and correct circuits matter most there."):/Garage/.test(e.location)?d.push("It's in the <b>garage</b> — where EV chargers, generator inlets and workshop circuits live."):/Outdoors/.test(e.location)?d.push("It's <b>outdoors</b> — where weather, GFCI protection and landscape lighting come in."):/At the panel/.test(e.location)?d.push("It's <b>at the panel itself</b> — which is where this package starts."):/Several places/.test(e.location)?d.push("It affects <b>several places or the whole home</b>, which usually points back to the panel or service, not a single device."):/Living areas/.test(e.location)&&d.push("It's in the <b>living areas or bedrooms</b> — the rooms where lighting, fans and everyday outlets get used most."),/Fuse box or 100A/.test(e.panel)?d.push("Your panel is a <b>fuse box or 100A</b> — built for a house with a fraction of today's loads, so capacity is part of the answer."):/^150A/.test(e.panel)?d.push("Your panel is <b>150A</b> — workable for a lot of homes, but Sharma will confirm it covers what you're adding."):/but full/.test(e.panel)?d.push("Your panel is <b>full, with no empty spaces</b> — anything new needs room first."):/breakers trip or it looks worn/.test(e.panel)?d.push("Your <b>200A panel trips or looks worn</b> — Sharma will test it in person before recommending repair or replacement."):/Newer 200A/.test(e.panel)?d.push("Good news: your <b>newer 200A panel has space left</b>, so this probably doesn't need a panel upgrade — Sharma confirms on site."):/Not sure/.test(e.panel)&&d.push("You weren't sure about your panel — that's fine. <b>Sharma checks it in person</b> at the quote visit; no guessing from photos."),!/Overhead/.test(e.service)||"panel"!==s&&"repair"!==s?!/Underground/.test(e.service)||"panel"!==s&&"repair"!==s||d.push("Your service is <b>underground</b> — no mast or overhead drop to worry about; panel work still gets permitted and inspected by Sharma."):d.push("Your power arrives <b>overhead, from a pole to a mast</b>. For panel or service work, <b>Sharma coordinates with the power company for you</b> — scheduling the disconnect and reconnect, sequencing the mast and service-drop work in the right order, and lining up the permit and inspection — so you never chase the utility yourself."),/before 1990/.test(e.home)&&d.push("Your home was <b>built before 1990</b>, so panel size, wiring and detectors all deserve a fresh look."),/hot tub or pool/.test(e.additions)?d.push("You've <b>added or are adding a hot tub or pool</b> — that's real new demand the panel has to carry safely."):/EV charger/.test(e.additions)?d.push("An <b>EV charger is recent or coming</b> — a 50A load the panel has to have room for."):/new AC/.test(e.additions)?d.push("A <b>new AC is recent or coming</b> — big loads like that start with panel capacity."):/home addition/.test(e.additions)&&d.push("A <b>home addition is recent or coming</b> — new rooms mean new circuits, and the panel has to feed them."),/Emergency/.test(e.timeline)?d.push("You marked this <b>emergency — today</b> — Sharma will treat it as urgent when your list arrives."):/This week/.test(e.timeline)?d.push("You'd like this handled <b>this week</b> — noted, and it travels with your list."):/month or two/.test(e.timeline)?d.push("Your timing is the <b>next month or two</b> — comfortable room to plan it properly."):/planning and pricing/.test(e.timeline)&&d.push("You're <b>just planning and pricing</b> — no rush; this match is the right starting point.");var u=quizIsDanger(e)?'<p class="warn"><b>One more time, because it matters:</b> burning smells, buzzing, sparking or a whole home out are not wait-and-see problems. Call Sharma at <a href="tel:+14078819076">407 881 9076</a> now — and 911 first if you see flames or smoke.</p>':"",p=quizProds(s,e),h=p.length?'<div class="quiz-prods"><p style="margin-bottom:6px"><b>Products that fit your answers:</b></p>'+p.map(function(e){var t=!!state.adds[e];return'<div class="qp-item"><span>'+esc(prodName(e))+'</span><button type="button" class="add-btn'+(t?" added":"")+'" data-qprod="'+e+'">'+(t?CHECK_ICON+" Added":"Add")+"</button></div>"}).join("")+"</div>":"",m=r&&a[i]>=3&&a[i]>=a[s]-2?'<div class="quiz-also"><b>Also worth a look: '+r.name+"</b><p>"+l[i]+'</p><button class="btn btn-outline" type="button" id="quizAlso">See what\'s in it →</button></div>':"";t.innerHTML=u+"<h3>Your match: "+n.name+"</h3><p>"+c+"</p><p>"+l[s]+'</p><p style="margin-bottom:6px"><b>Why this match, in your answers:</b></p><ul class="quiz-reasons">'+d.map(function(e){return"<li>"+e+"</li>"}).join("")+"</ul>"+h+m+'<button class="btn btn-primary" type="button" id="quizGo" style="width:100%;font-size:16px">Add this package &amp; send my picks →</button><p style="margin-top:8px;font-size:13.5px">All your questionnaire answers are included when you send your list, so Sharma already knows the story before the call.</p>',t.classList.add("show"),$("quizGo").addEventListener("click",function(){state.pkg=n.id,cz.base&&(cz.base="",cz.removed={},cz.choices={},renderCz()),renderSel(),openListSheet()});var b=$("quizAlso");b&&b.addEventListener("click",function(){openPkgSheet(i)}),document.querySelectorAll("[data-qprod]").forEach(function(e){e.addEventListener("click",function(){var t=e.getAttribute("data-qprod");state.adds[t]?delete state.adds[t]:state.adds[t]=1,renderSel(),renderProds(),renderQuizResult(),toast(state.adds[t]?"Added: "+prodName(t):"Removed")})})}function f(e,t){a[e]+=t}}$("qBack").addEventListener("click",function(){if(wiz.done){wiz.done=!1,wiz.step=6;var e=$("quizResult");e.classList.remove("show"),e.innerHTML=""}else wiz.step>1&&wiz.step--;showStep()}),$("qNext").addEventListener("click",function(){if(stepComplete(wiz.step)){wiz.step<6?(wiz.step++,showStep()):(wiz.done=!0,showStep(),renderQuizResult());var e=$("quiz");e&&e.scrollIntoView({block:"start",behavior:"smooth"})}}),showStep(),renderPkgs(),renderSel();
-</script>
-<nav class="sk-tabbar" aria-label="Sections"><div class="sk-tabbar__inner"><a class="sk-tab" href="#/packages" data-tab="packages"><svg class="sk-icon"><use href="#i-home"/></svg>Packages</a><a class="sk-tab" href="#/products" data-tab="products"><svg class="sk-icon"><use href="#i-list"/></svg>Products</a><a class="sk-tab" href="#/customize" data-tab="customize"><svg class="sk-icon"><use href="#i-edit"/></svg>Customize</a><a class="sk-tab" href="#/learn" data-tab="learn"><svg class="sk-icon"><use href="#i-doc"/></svg>Learn</a><a class="sk-tab" href="#/compare" data-tab="compare"><svg class="sk-icon"><use href="#i-chart"/></svg>Compare</a></div></nav>
 <script>
-/* Sharma kit v1.3 adapter: real SK.stack tab roots (scroll kept by the stack, cross-fade),
-   Appearance sheet via SK.scheme, service worker registered MANUALLY with the repo scope
-   (SK.registerSW hardcodes scope "/", which throws on GitHub Pages project sites). */
+var state={pkg:null,adds:{},cat:0,query:"",lv:false,quiz:{reason:"",detail:"",location:"",panel:"",service:"",home:"",additions:"",timeline:""}};
+function $(id){return document.getElementById(id)}
+function toast(m){var t=$("toast");t.textContent=m;t.classList.add("show");setTimeout(function(){t.classList.remove("show")},2400)}
+function esc(s){return s.replace(/&/g,"&amp;").replace(/</g,"&lt;")}
+function switchView(n){document.querySelectorAll("[data-view]").forEach(function(x){x.classList.toggle("on",x.getAttribute("data-view")===n)});document.querySelectorAll(".view").forEach(function(v){v.classList.toggle("on",v.id==="view-"+n)});}
+function scrollToViewTop(){var menu=$("topMenu");var mh=menu?menu.offsetHeight:60;var main=document.querySelector("main");if(!main)return;var y=main.getBoundingClientRect().top+(window.scrollY||window.pageYOffset||0)-mh-2;if(y<0)y=0;try{window.scrollTo({top:y,left:0,behavior:"auto"});}catch(e){window.scrollTo(0,y);}}
+function goToView(n){switchView(n);scrollToViewTop();}
+document.querySelectorAll("[data-view]").forEach(function(b){b.addEventListener("click",function(){goToView(b.getAttribute("data-view"));});});
+function showView(n){goToView(n);}
+$("btnDetails").addEventListener("click",function(){showView("products");});
+function renderPkgs(){
+ $("pkgGrid").innerHTML=PACKAGES.map(function(p){
+ return '<article class="pkg'+(p.pop?" pop":"")+'" id="pkg-'+p.id+'">'
+ +(p.pop?'<span class="badge-pop">★ Most common upgrade</span>':"")
+ +'<img loading="lazy" class="pkg-img" src="'+PKGIMG[p.id]+'" alt="'+PKGALT[p.id]+'"/>'
+ +pkgRow(p.id)
+ +'<div class="body">'+pkgBadge(p.id)+'<div class="tier">'+p.tier+'</div><h3>'+p.name+'</h3><p class="for">'+p.for+'</p><span class="count">'+p.count+'</span>'
+ +'<p class="bestfor"><b>Decide:</b> '+PKGBEST[p.id]+'</p><p class="whyline"><b>Why it matters:</b> '+PKGWHY[p.id]+'</p><div class="spacer"></div>'
+ +'<button class="link-btn" type="button" data-details="'+p.id+'">See all items →</button>'
+ +'<button class="btn btn-primary pick-btn" type="button" data-pick="'+p.id+'" aria-pressed="false">Choose this package</button></div></article>';
+ }).join("");
+ document.querySelectorAll("[data-pick]").forEach(function(btn){btn.addEventListener("click",function(){var id=btn.getAttribute("data-pick");state.pkg=(state.pkg===id)?null:id;if(state.pkg&&cz.base){cz.base="";cz.removed={};cz.choices={};renderCz();}renderSel();var p=PACKAGES.filter(function(x){return x.id===state.pkg})[0];toast(p?("Added: "+p.name):"Package removed");});});
+ document.querySelectorAll("[data-details]").forEach(function(btn){btn.addEventListener("click",function(){openPkgSheet(btn.getAttribute("data-details"))});});
+ renderSel();
+}
+function openSheet(html){$("sheetBody").innerHTML=html;$("sheetWrap").classList.add("open");$("sheetWrap").setAttribute("aria-hidden","false");document.querySelector(".sheet").scrollTop=0;}
+function closeSheet(){$("sheetWrap").classList.remove("open");$("sheetWrap").setAttribute("aria-hidden","true");}
+$("sheetBg").addEventListener("click",closeSheet);$("sheetClose").addEventListener("click",closeSheet);
+document.addEventListener("keydown",function(e){if(e.key==="Escape")closeSheet();});
+function pkgHighlights(p){var idx=PACKAGES.indexOf(p);var out=[];COMPARE.forEach(function(r){if(r[idx+1].indexOf("✓")===0)out.push(r[0]);});return out;}
+function openPkgSheet(id){
+ var p=PACKAGES.filter(function(x){return x.id===id})[0];var on=state.pkg===id;var hl=pkgHighlights(p);
+ openSheet('<div style="font-size:11px;font-weight:700;letter-spacing:.14em;color:var(--muted);text-transform:uppercase">'+p.tier+'</div>'
+ +'<h2>'+p.name+'</h2><p class="sub">'+p.for+' · '+p.count+'</p>'
+ +'<img loading="lazy" class="pkg-photo" src="'+PKGIMG[p.id]+'" alt="'+PKGALT[p.id]+'"/>'
+ +'<p class="sub" style="margin-bottom:4px"><b style="color:var(--ink)">Decide:</b> '+PKGBEST[p.id]+'</p>'
+ +'<p class="sub" style="margin-bottom:4px"><b style="color:var(--orange)">Why it matters:</b> '+PKGWHY[p.id]+'</p>'
+ +'<h3 class="mini">In plain English</h3><ul class="hl">'+p.bullets.map(function(b){return "<li>"+b+"</li>"}).join("")+'</ul>'
+ +'<h3 class="mini">Everything included</h3><ul class="items">'+p.items.map(function(i){return "<li>"+i+"</li>"}).join("")+'</ul>'
+ +(hl.length?'<h3 class="mini">At a glance</h3><ul class="hl">'+hl.map(function(h){return "<li>"+h+"</li>"}).join("")+"</ul>":"")
+ +'<p class="sub">Sharma confirms the final scope — and your panel capacity and sizing — on site at the quote visit, then quotes the work.</p>'
+ +'<button class="btn btn-primary" style="width:100%" type="button" id="sheetPick">'+(on?"✓ Selected — tap to remove":"Choose this package")+'</button>');
+ $("sheetPick").addEventListener("click",function(){state.pkg=on?null:id;if(state.pkg&&cz.base){cz.base="";cz.removed={};cz.choices={};renderCz();}renderSel();closeSheet();toast(state.pkg?("Added: "+p.name):"Package removed");});
+}
 (function(){
-  var VIEWS=["packages","products","customize","learn","compare"];
-  var TITLE="Electrical Picker", SCOPE="/electrical-app/";
-  var LOGO='<a class="sk-header__logo" href="#/packages"><img src="https://sharma-kit.sharma-crew.workers.dev/assets/logo-white-header.png" alt="Sharma Electric &amp; HVAC" width="103" height="20"></a>';
-  var TRAIL='<a class="sk-header__btn" href="tel:+14078819076" aria-label="Call Sharma"><svg class="sk-icon"><use href="#i-phone"/></svg></a><button type="button" class="sk-header__btn" data-appearance-open aria-label="Settings"><svg class="sk-icon"><use href="#i-settings"/></svg></button>';
-  function regSW(){
-    if(!("serviceWorker" in navigator)) return;
-    if(!(location.protocol==="https:"||location.hostname==="localhost"||location.hostname==="127.0.0.1")) return;
-    navigator.serviceWorker.register("sw.js?kit="+encodeURIComponent("https://sharma-kit.sharma-crew.workers.dev"),{scope:SCOPE}).catch(function(e){console.warn("[picker] sw",e);});
-  }
-  if(document.readyState==="complete") regSW(); else addEventListener("load", regSW);
-  document.addEventListener("click", function(e){
-    var b=e.target.closest&&e.target.closest("[data-appearance-open]");
-    if(b){ e.preventDefault(); if(window.SK&&SK.openSheet) SK.openSheet("appearanceSheet"); }
+ var head="<thead><tr><th>What is included</th>"+PACKAGES.map(function(p){return '<th class="'+(p.pop?"pop":"")+'">'+p.name+"</th>"}).join("")+"</tr></thead>";
+ var body=COMPARE.map(function(r){return "<tr><td>"+r[0]+"</td>"+r.slice(1).map(function(v){return '<td class="'+(v.indexOf("✓")===0?"yes":"no")+'">'+v+"</td>"}).join("")+"</tr>"}).join("");
+ $("compareTable").innerHTML=head+"<tbody>"+body+"</tbody>";
+})();
+
+var BESTFOR=["Best for: the capacity everything else depends on","Best for: protection you never think about again","Best for: the upgrade you see every day","Best for: new loads done safely","Best for: finding the real cause, not the symptom","Best for: devices that look as good as they work"];
+var ICONS=[
+ '<svg viewBox="0 0 24 24"><path d="M13 2L4 14h6l-1 8 9-12h-6z"/></svg>',
+ '<svg viewBox="0 0 24 24"><path d="M6 3v7a6 6 0 0 0 12 0V3"/><path d="M9 3v4M15 3v4M12 16v5"/></svg>',
+ '<svg viewBox="0 0 24 24"><path d="M9 18h6M10 21h4"/><path d="M12 3a6 6 0 0 0-4 10.5c.8.7 1 1.5 1 2.5h6c0-1 .2-1.8 1-2.5A6 6 0 0 0 12 3z"/></svg>',
+ '<svg viewBox="0 0 24 24"><path d="M7 3v4M17 3v4M5 7h14v4a7 7 0 0 1-14 0z"/><path d="M12 18v3"/></svg>',
+ '<svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3M11 8v3l2 2"/></svg>',
+ '<svg viewBox="0 0 24 24"><rect x="6" y="3" width="12" height="18" rx="2"/><path d="M12 8v5"/></svg>'];
+var P="assets/products/";
+function prodImg(name){
+ if(/radiant/.test(name))return P+"legrand-radiant.jpg";
+ if(/adorne/.test(name))return P+"legrand-adorne.jpg";
+ if(/Siemens 200A panel/.test(name))return "assets/img-6e88e3084f06.webp";
+ if(/surge/.test(name))return P+"surge.jpg";
+ if(/smoke detectors/.test(name))return "assets/img-c86e5ec15352.webp";
+ if(/Carbon monoxide/.test(name))return "assets/img-c86e5ec15352.webp";
+ if(/Guide-light/.test(name))return P+"guidelight.jpg";
+ if(/Recessed/.test(name))return P+"recessed1.jpg";
+ if(/Pendant/.test(name))return "assets/img-897b15b50803.webp";
+ if(/Ceiling fan installation/.test(name))return "assets/img-26978ffa2ce0.webp";
+ if(/Fan & light wall control/.test(name))return P+"fanswitch.jpg";
+ if(/Dimmers & smart/.test(name))return P+"moes-dimmer.jpg";
+ if(/Outdoor & landscape/.test(name))return "assets/img-a7a74770665e.webp";
+ if(/EV charger circuit/.test(name))return P+"evcharger.jpg";
+ if(/NEMA 14-50/.test(name))return P+"evready.jpg";
+ if(/Generac/.test(name))return P+"genport.jpg";
+ if(/Dedicated circuits/.test(name))return "assets/img-6e88e3084f06.webp";
+ if(/Dead outlet/.test(name))return "assets/img-f28cf4796e33.webp";
+ return null;
+}
+var WHYCAT=["The panel is the budget and the safety system for every circuit in the house — its size and condition decide what your home can safely do.","These are the devices between your family and the two quiet dangers: shock and undetected smoke or CO.","Lighting and fans are the upgrade you see and feel every day — layout and the right boxes matter more than the fixture price.","New big loads are where panels get overloaded. A dedicated, correctly sized circuit is what makes an EV charger or generator safe.","A fault you can see is a symptom. Finding the cause is what keeps it from coming back — or getting worse.","Switches and outlets are the only part of your electrical system you touch every day — designer devices turn a commodity part into part of the room."];
+$("catChips").innerHTML=CATS.map(function(c,ci){return '<button type="button" data-cat="'+ci+'" class="'+(ci===0?"on":"")+'">'+c.short+' ('+c.items.length+')</button>';}).join("");
+function setCat(ci){state.cat=ci;document.querySelectorAll("[data-cat]").forEach(function(x){x.classList.toggle("on",+x.getAttribute("data-cat")===ci)});renderProds();}
+document.querySelectorAll("[data-cat]").forEach(function(b){b.addEventListener("click",function(){setCat(+b.getAttribute("data-cat"));});});
+document.querySelectorAll("[data-decide]").forEach(function(b){b.addEventListener("click",function(){state.query="";$("prodSearch").value="";setCat(+b.getAttribute("data-decide"));});});
+$("prodSearch").addEventListener("input",function(){state.query=this.value.trim().toLowerCase();renderProds();});
+function prodName(key){var p=key.split("-");return CATS[+p[0]].items[+p[1]][0]}
+function legrandShowHTML(){
+ function addBtn(k){var on=!!state.adds[k];return '<button type="button" class="add-btn'+(on?" added":"")+'" data-add="'+k+'">'+(on?"✓ Added":"Add")+"</button>"}
+ return '<div class="lg-show"><h3 style="font-size:24px;text-transform:uppercase;margin:2px 2px 4px">Legrand designer switches &amp; outlets</h3>'
+ +'<p class="cat-sub" style="margin-bottom:10px">Two collections, one idea: the devices you touch every day should look as finished as the rest of the room. No prices — add what you like and Sharma quotes it with your project.</p>'
+ +'<div class="lg-grid">'
+ +'<div class="lg-card"><img loading="lazy" src="'+P+'legrand-radiant.jpg" alt="A Legrand radiant screwless white outlet — clean, low-profile, no visible screws"/><div class="lg-body"><span class="lg-tag">The clean upgrade</span><h4>Legrand radiant®</h4>'
+ +'<p>Screwless-look switches, dimmers and outlets with a low-profile design that goes with everything. The easiest whole-home device refresh there is.</p>'
+ +'<ul><li><b>Devices:</b> switches, LED dimmers, outlets, GFCI, tamper-resistant &amp; USB outlets, fan controls</li><li><b>Finishes:</b> White, Light Almond, Black, Gray, Nickel and Brown — with matching screwless wall plates</li><li><b>Why it matters:</b> every switch and outlet in the house matches, with no visible screws and no dated toggles — the room looks finished at a glance.</li></ul>'
+ +'<div class="row" style="display:flex;align-items:center;gap:8px"><span style="flex:1"></span>'+addBtn("5-0")+'</div></div></div>'
+ +'<div class="lg-card lux"><img loading="lazy" src="'+P+'legrand-adorne.jpg" alt="A Legrand adorne paddle dimmer in magnesium with a designer wall plate — the luxury collection"/><div class="lg-body"><span class="lg-tag">The luxury line ★</span><h4>Legrand adorne®</h4>'
+ +'<p>Legrand\'s designer collection — a square, architectural look with switches that work like nothing else in the house. This is the luxury upgrade.</p>'
+ +'<ul><li><b>Devices:</b> Paddle, Wave (wave a hand past it), Whisper and touch switches &amp; dimmers, pop-out outlets, USB outlets</li><li><b>Finishes:</b> White, Magnesium and Graphite devices, with designer wall plates including real wood, metal and leather-look finishes</li><li><b>Why it matters:</b> switches become part of the design — guests notice them, and the pop-out outlet keeps a kitchen backsplash clean until the moment you need power.</li></ul>'
+ +'<div class="row" style="display:flex;align-items:center;gap:8px"><span style="flex:1"></span>'+addBtn("5-2")+'</div></div></div>'
+ +'</div>'
+ +'<table class="lg-compare"><thead><tr><th></th><th>Standard</th><th>radiant®</th><th>adorne®</th></tr></thead><tbody>'
+ +'<tr><td>Look</td><td>Basic toggle / rocker, builder standard</td><td>Clean and low-profile, screwless look</td><td>Designer square — a statement piece</td></tr>'
+ +'<tr><td>Wall plates</td><td>Visible screws</td><td>Screwless, color-matched</td><td>Screwless designer plates, incl. wood &amp; metal</td></tr>'
+ +'<tr><td>Switch styles</td><td>Toggle or paddle</td><td>Paddle switches &amp; dimmers</td><td>Paddle, Wave, Whisper, touch</td></tr>'
+ +'<tr><td>Best for</td><td>Like-for-like replacements</td><td>A whole-home refresh</td><td>Kitchens, primary suites, statement rooms</td></tr>'
+ +'<tr><td>Tier</td><td>Everyday</td><td>Upgraded</td><td>Luxury</td></tr>'
+ +'</tbody></table></div>';
+}
+function renderProds(){
+ var _py=window.scrollY||window.pageYOffset||0;
+ var html="",any=false;
+ if(state.query===""&&state.cat===5){html+=legrandShowHTML();any=true;}
+ CATS.forEach(function(c,ci){
+   if(state.query===""&&ci!==state.cat)return;
+   c.items.forEach(function(it,ii){
+     var key=ci+"-"+ii;
+     if(state.query&&(it[0]+" "+it[1]+" "+BESTFOR[ci]).toLowerCase().indexOf(state.query)<0)return;
+     any=true;var on=!!state.adds[key];var img=prodImg(it[0]);
+     var thumb=img?('<img class="thumb" src="'+img+'" alt="" loading="lazy"/>'):('<span class="thumb tile" aria-hidden="true">'+ICONS[ci]+'</span>');
+     html+='<div class="prod'+(on?" added":"")+'"><div class="top">'+thumb+'<div class="info"><h4>'+it[0]+'</h4><p class="desc">'+esc(it[1])+'</p><p class="whyline"><b>Why it matters:</b> '+WHYCAT[ci]+'</p><div class="tags"><span class="tag best">'+BESTFOR[ci]+'</span><span class="tag">Included in: <b>'+it[2]+'</b></span></div></div></div>'
+       +'<div class="row"><span class="spacer"></span>'
+       +(on?'<span class="qty show"><button type="button" data-dec="'+key+'" aria-label="One less">−</button><b>'+state.adds[key]+'</b><button type="button" data-inc="'+key+'" aria-label="One more">+</button></span>':"")
+       +'<button class="add-btn'+(on?" added":"")+'" type="button" data-add="'+key+'">'+(on?"✓ Added":"Add")+'</button></div></div>';
+   });
+ });
+ if(!any)html='<div class="empty-note">No options match — try a different search.</div>';
+ $("prodList").innerHTML=html;
+ $("catSub").textContent=state.query?"Searching everywhere.":CATS[state.cat].sub;
+ document.querySelectorAll("[data-add]").forEach(function(b){b.addEventListener("click",function(){var k=b.getAttribute("data-add");if(state.adds[k])delete state.adds[k];else state.adds[k]=1;renderSel();renderProds();})});
+ document.querySelectorAll("[data-inc]").forEach(function(b){b.addEventListener("click",function(){var k=b.getAttribute("data-inc");state.adds[k]=(state.adds[k]||1)+1;renderSel();renderProds();})});
+ document.querySelectorAll("[data-dec]").forEach(function(b){b.addEventListener("click",function(){var k=b.getAttribute("data-dec");state.adds[k]=(state.adds[k]||1)-1;if(state.adds[k]<1)delete state.adds[k];renderSel();renderProds();})});
+ var _ny=window.scrollY||window.pageYOffset||0;if(Math.abs(_ny-_py)>1){try{window.scrollTo({top:_py,left:0,behavior:"instant"});}catch(e){window.scrollTo(0,_py);}}
+}
+function selCount(){return (state.pkg?1:0)+(cz.base?1:0)+Object.keys(state.adds).length}
+function renderSel(){
+ PACKAGES.forEach(function(p){var card=$("pkg-"+p.id);if(!card)return;var btn=card.querySelector("[data-pick]");var on=state.pkg===p.id;card.classList.toggle("selected",on);btn.setAttribute("aria-pressed",on?"true":"false");btn.textContent=on?"✓ Selected — tap to remove":"Choose this package";btn.classList.toggle("added",on);});
+ var n=selCount();$("barCount").textContent=n;var label="My list is empty";
+ if(cz.base){label=cz.base==="scratch"?"Custom — from scratch":("Custom — based on "+czPkg().name)+(Object.keys(state.adds).length?" + extras":"");}
+ else if(state.pkg){var p=PACKAGES.filter(function(x){return x.id===state.pkg})[0];label=p.name+(Object.keys(state.adds).length?" + extras":"");}
+ else if(n)label="Options only — no package yet";
+ $("barLabel").textContent=label;
+}
+function selListHTML(){
+ var html="";
+ if(cz.base){var cs=czSummary();
+   if(cz.base==="scratch"){html+='<div class="sel-item"><div><b>CUSTOM — BUILT FROM SCRATCH</b><small>Tell Sharma about your home below — we\'ll recommend the right work to match.</small></div><button class="x2" type="button" data-rm-cz>Remove</button></div>';}
+   else{var cp=czPkg();html+='<div class="sel-item"><div><b>CUSTOM — based on '+cp.name+'</b><small>'+cs.kept.length+" of "+cp.items.length+" items kept</small>"+(cs.removed.length?("<small>Removed: "+cs.removed.map(esc).join("; ")+"</small>"):"")+(cs.choices.length?("<small>Your answers: "+cs.choices.map(esc).join("; ")+"</small>"):"")+'</div><button class="x2" type="button" data-rm-cz>Remove</button></div>';}}
+ if(state.pkg){var p=PACKAGES.filter(function(x){return x.id===state.pkg})[0];html+='<div class="sel-item"><div><b>PACKAGE: '+p.name+'</b><small>'+p.count+" · "+p.for+'</small></div><button class="x2" type="button" data-rm-pkg>Remove</button></div>';}
+ Object.keys(state.adds).forEach(function(k){html+='<div class="sel-item"><div>'+esc(prodName(k))+(state.adds[k]>1?(" × "+state.adds[k]):"")+'</div><button class="x2" type="button" data-rm="'+k+'">Remove</button></div>';});
+ if(!html)html='<div class="sel-empty">Nothing picked yet — choose a package or add options, then come back here.</div>';
+ return html;
+}
+function openListSheet(){
+ openSheet('<h2>My electrical list</h2><p class="sub">Nothing is ordered yet — this list goes to Sharma. We check your panel and the work at your home, then price it and confirm next steps.</p>'
+ +'<div id="sheetSelList">'+selListHTML()+'</div>'
+ +'<form class="client" id="clientForm" onsubmit="return false">'
+ +'<label>Your name *<input id="fName" autocomplete="name" placeholder="Full name"/></label>'
+ +'<label>Phone<input id="fPhone" autocomplete="tel" placeholder="(407) 555-0123"/></label>'
+ +'<label>Home address<input id="fHome" placeholder="Street, city"/></label>'
+ +'<label>Best time to call<input id="fBestTime" placeholder="e.g. Weekday mornings, or after 5pm"/></label>'
+ +'<label class="full">Anything urgent?<select id="fUrgency"><option>No — planning a project</option><option>No power to part of the home</option><option>A breaker keeps tripping</option><option>Burning smell or sparking — please call me back fast</option><option>Detectors are beeping / alarming</option></select></label>'
+ +'<label class="full">Notes (optional)<textarea id="fNotes" rows="2" placeholder="What is happening at home — the rooms, the problem, what you would like changed"></textarea></label>'
+ +'<p class="full" style="font-size:13px;color:var(--muted);margin:2px 0 0">Optional: a photo of your breaker panel (door open) helps Sharma come prepared — we may ask you to text one after we call.</p>'
+ +'<button type="button" class="lv-line full'+(state.lv?" on":"")+'" id="lvLine"><span class="lv-box">'+(state.lv?"✓":"")+'</span><span><b>Also price my low voltage / smart home options</b><span>Adding lights, switches or outlets? Sharma also does low-voltage smart home work — smart lighting, doorbells, cameras and more (see the Smart Home Picker). Tick this and Sharma prices those options with your electrical work.</span></span></button>'
+ +'</form>'
+ +'<div class="actions"><button class="btn btn-primary" id="btnSubmit" type="button">Send my list to Sharma</button><button class="btn btn-navy" id="btnCopy" type="button">Copy</button><button class="btn btn-outline" id="btnDownload" type="button">Download</button><button class="btn btn-outline" id="btnClear" type="button">Clear all</button></div>'
+ +'<div class="submit-status" id="submitStatus" role="status" aria-live="polite" hidden></div>'
+ +'<p style="font-size:13px;color:var(--muted);margin-top:10px">Tap <b>Send my list to Sharma</b> and it goes straight to Sharma Electric &amp; HVAC from this page — no email app needed. <b>Sharma will call you back.</b> FL Lic. EC13013924 / CAC1823596. Or call <a href="tel:+14078819076">407 881 9076</a>.</p>');
+ bindSheetList();
+ var lvb=$("lvLine");if(lvb)lvb.addEventListener("click",function(){state.lv=!state.lv;lvb.classList.toggle("on",state.lv);lvb.querySelector(".lv-box").textContent=state.lv?"✓":"";toast(state.lv?"Added: Sharma will also price low-voltage / smart home options":"Removed the low-voltage / smart home pricing request");});
+}
+function bindSheetList(){
+ var rp=document.querySelector("[data-rm-pkg]");if(rp)rp.addEventListener("click",function(){state.pkg=null;renderSel();refreshSheetList();});
+ var rc=document.querySelector("[data-rm-cz]");if(rc)rc.addEventListener("click",function(){cz.base="";cz.removed={};cz.choices={};renderCz();renderSel();refreshSheetList();});
+ document.querySelectorAll("[data-rm]").forEach(function(b){b.addEventListener("click",function(){delete state.adds[b.getAttribute("data-rm")];renderSel();renderProds();refreshSheetList();});});
+ $("btnSubmit").addEventListener("click",onSubmit);$("btnCopy").addEventListener("click",onCopy);$("btnDownload").addEventListener("click",onDownload);
+ $("btnClear").addEventListener("click",function(){state.pkg=null;state.adds={};state.lv=false;var lvb2=$("lvLine");if(lvb2){lvb2.classList.remove("on");lvb2.querySelector(".lv-box").textContent="";}cz.base="";cz.removed={};cz.choices={};submitState.sent=false;submitState.sending=false;var sb=$("btnSubmit");if(sb){sb.disabled=false;sb.textContent="Send my list to Sharma";sb.classList.remove("added");}var ss=$("submitStatus");if(ss){ss.hidden=true;ss.textContent="";}renderCz();renderSel();renderProds();refreshSheetList();toast("List cleared");});
+}
+function refreshSheetList(){var el=$("sheetSelList");if(el)el.innerHTML=selListHTML();bindSheetList();}
+$("btnOpenList").addEventListener("click",openListSheet);
+function buildText(){
+ var lines=[];lines.push("SHARMA ELECTRIC & HVAC — HOME ELECTRICAL REQUEST");lines.push("From: Electrical Picker (homeowner — upgrades & service)");lines.push("");
+ if($("fName").value.trim())lines.push("Name: "+$("fName").value.trim());
+ if($("fPhone").value.trim())lines.push("Phone: "+$("fPhone").value.trim());
+ if($("fHome").value.trim())lines.push("Home address: "+$("fHome").value.trim());
+ if($("fBestTime")&&$("fBestTime").value.trim())lines.push("Best time to call: "+$("fBestTime").value.trim());
+ if($("fUrgency")&&$("fUrgency").value)lines.push("Urgency: "+$("fUrgency").value);
+ if(state.lv)lines.push("ALSO PRICE: Low voltage / smart home options — yes, price those with this work.");
+ if(state.quiz.reason)lines.push("Questionnaire — why they came: "+state.quiz.reason);
+ if(state.quiz.detail)lines.push("Questionnaire — details: "+state.quiz.detail);
+ if(state.quiz.location)lines.push("Questionnaire — where in the home: "+state.quiz.location);
+ if(state.quiz.panel)lines.push("Questionnaire — their panel: "+state.quiz.panel);
+ if(state.quiz.service)lines.push("Questionnaire — how power reaches the home: "+state.quiz.service);
+ if(state.quiz.home)lines.push("Questionnaire — home age: "+state.quiz.home);
+ if(state.quiz.additions)lines.push("Questionnaire — new big loads: "+state.quiz.additions);
+ if(state.quiz.timeline)lines.push("Questionnaire — how soon: "+state.quiz.timeline);
+ lines.push("");
+ if(cz.base){var cs2=czSummary();
+   if(cz.base==="scratch"){lines.push("CUSTOM — BUILT FROM SCRATCH");lines.push("The options below are the request. Please recommend the right work to match.");lines.push("");}
+   else{var cp2=czPkg();lines.push("CUSTOM — based on "+cp2.name);lines.push("Items kept ("+cs2.kept.length+" of "+cp2.items.length+"):");cs2.kept.forEach(function(i){lines.push("  • "+i)});if(cs2.removed.length){lines.push("Removed by homeowner:");cs2.removed.forEach(function(i){lines.push("  − "+i)});}if(cs2.choices.length){lines.push("Homeowner answers:");cs2.choices.forEach(function(i){lines.push("  • "+i)});}lines.push("");}}
+ if(state.pkg){var p=PACKAGES.filter(function(x){return x.id===state.pkg})[0];lines.push("PACKAGE: "+p.name+" ("+p.count+")");p.items.forEach(function(i){lines.push("  • "+i)});lines.push("");}
+ var keys=Object.keys(state.adds);
+ if(keys.length){lines.push("ADDITIONAL OPTIONS:");keys.forEach(function(k){lines.push("  • "+prodName(k)+(state.adds[k]>1?(" × "+state.adds[k]):""))});lines.push("");}
+ if($("fNotes").value.trim()){lines.push("NOTES:");lines.push($("fNotes").value.trim());lines.push("");}
+ lines.push("Please confirm panel capacity and sizing at my home, price this work, and confirm next steps.");
+ return lines.join("\n");
+}
+var submitState={sending:false,sent:false};
+function setSubmitStatus(kind,msg){var el=$("submitStatus");if(!el)return;el.hidden=false;el.className="submit-status "+kind;el.textContent=msg;}
+function onSubmit(){
+ if(submitState.sending)return;
+ if(submitState.sent){toast("This list was already sent to Sharma");return;}
+ if(!selCount()){toast("Pick a package or an option first");return;}
+ if(!$("fName").value.trim()){toast("Add your name so Sharma knows who this is from");$("fName").focus();return;}
+ var btn=$("btnSubmit");var name=$("fName").value.trim();
+ var payload={
+  _subject:"Electrical Picker selections — "+name,
+  _template:"table",
+  _captcha:"false",
+  Name:name,
+  Phone:$("fPhone").value.trim(),
+  "Home address":$("fHome").value.trim(),
+  "Best time to call":$("fBestTime").value.trim(),
+  Urgency:$("fUrgency").value,
+  "Also price low voltage / smart home options":state.lv?"Yes":"No",
+  "Questionnaire — why they came":state.quiz.reason,
+  "Questionnaire — details":state.quiz.detail,
+  "Questionnaire — where in the home":state.quiz.location,
+  "Questionnaire — their panel":state.quiz.panel,
+  "Questionnaire — how power reaches the home":state.quiz.service,
+  "Questionnaire — home age":state.quiz.home,
+  "Questionnaire — new big loads":state.quiz.additions,
+  "Questionnaire — how soon":state.quiz.timeline,
+  Notes:$("fNotes").value.trim(),
+  Selections:buildText()
+ };
+ submitState.sending=true;
+ if(btn){btn.disabled=true;btn.textContent="Sending…";}
+ var st=$("submitStatus");if(st){st.hidden=true;st.textContent="";}
+ fetch("https://formsubmit.co/ajax/office@sharmaelectric.com",{method:"POST",headers:{"Content-Type":"application/json","Accept":"application/json"},body:JSON.stringify(payload)})
+ .then(function(r){return r.json().catch(function(){return {}}).then(function(data){if(!r.ok||(data&&data.success!==undefined&&String(data.success)!=="true"))throw new Error("submit failed");return data;});})
+ .then(function(){
+   submitState.sending=false;submitState.sent=true;
+   if(btn){btn.disabled=true;btn.textContent="✓ Sent to Sharma";btn.classList.add("added");}
+   setSubmitStatus("ok","Thank you — you're in. Sharma Electric & HVAC will call you back to book your quote visit. If anything is sparking or smells like burning in the meantime, call 407 881 9076 right away — and 911 if you see flames or smoke.");
+   toast("Sent — Sharma will call you back");
+   var bl=$("barLabel");if(bl)bl.textContent=bl.textContent+" · Sent to Sharma";
+ })
+ .catch(function(){
+   submitState.sending=false;
+   if(btn){btn.disabled=false;btn.textContent="Send my list to Sharma";}
+   setSubmitStatus("err","Sorry — your list didn't send. Your list is still here and nothing was lost. Check your connection and tap Send again, or use Copy or Download below and share it with Sharma that way. You can also call 407 881 9076.");
+   toast("Didn't send — your list is still here. Try again, or use Copy / Download.");
+ });
+}
+function onCopy(){if(!selCount()){toast("Pick a package or an option first");return;}var txt=buildText();if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(function(){toast("List copied — paste it anywhere")},function(){fallbackCopy(txt)});}else{fallbackCopy(txt);}}
+function fallbackCopy(txt){var ta=document.createElement("textarea");ta.value=txt;document.body.appendChild(ta);ta.select();try{document.execCommand("copy");toast("List copied")}catch(e){toast("Copy didn't work — use Download instead")}document.body.removeChild(ta);}
+function onDownload(){if(!selCount()){toast("Pick a package or an option first");return;}var blob=new Blob([buildText()],{type:"text/plain"});var a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="my-electrical-list.txt";document.body.appendChild(a);a.click();document.body.removeChild(a);setTimeout(function(){URL.revokeObjectURL(a.href)},2000);toast("Downloaded your list");}
+
+var cz={base:"",removed:{},choices:{}};
+function czPkg(){return PACKAGES.filter(function(x){return x.id===cz.base})[0]||null}
+function czCatOf(item){var s=item.toLowerCase();if(/dead outlet|dead room|keeps tripping|flickering|burning smell|stopped working|wobbles|half the house|switch, outlet or fixture that/.test(s))return 4;if(/ev charger|14-50|generator|interlock|dedicated circuit/.test(s))return 3;if(/recessed|pendant|ceiling fan|fan & light|dimmer|smart switch|landscape|fixture swap|legrand|smart home/.test(s))return 2;if(/gfci receptacle|tamper|smoke|carbon monoxide|guide-light|outlet & switch check|usb/.test(s))return 1;return 0;}
+function czChoicesFor(id){return CZCHOICES.filter(function(c){return c.pkgs.indexOf(id)>=0})}
+function czSummary(){var p=czPkg(),out={kept:[],removed:[],choices:[]};if(p){p.items.forEach(function(it){(cz.removed[it]?out.removed:out.kept).push(it)});}czChoicesFor(cz.base).forEach(function(c){if(cz.choices[c.key])out.choices.push(c.label.split(" — ")[0].split(" (")[0]+": "+cz.choices[c.key]);});return out;}
+function renderCzBases(){
+ var html='<button type="button" class="base-btn'+(cz.base==="scratch"?" on":"")+'" data-base="scratch"><span class="bb-scratch">START FROM SCRATCH</span><span class="bb-t">From scratch<small>Build your own list</small></span></button>';
+ PACKAGES.forEach(function(p){html+='<button type="button" class="base-btn'+(cz.base===p.id?" on":"")+'" data-base="'+p.id+'"><img src="'+PKGIMG[p.id]+'" alt="" loading="lazy"/><span class="bb-t">'+p.name+"<small>"+p.count+"</small></span></button>";});
+ $("czBases").innerHTML=html;
+ document.querySelectorAll("[data-base]").forEach(function(b){b.addEventListener("click",function(){var id=b.getAttribute("data-base");if(cz.base!==id){cz.base=id;cz.removed={};cz.choices={};if(state.pkg)state.pkg=null;}renderCz();renderSel();toast(id==="scratch"?"Starting from scratch — add options below":("Base: "+czPkg().name+" — now make it yours"));});});
+}
+function renderCz(){
+ var _cy=window.scrollY||window.pageYOffset||0;
+ renderCzBases();
+ var open={};document.querySelectorAll("#czMain details[data-g]").forEach(function(d){if(d.open)open[d.getAttribute("data-g")]=1});
+ var html="";
+ if(!cz.base){html='<p class="viewhint" style="margin-top:12px">Pick a starting point above — a package to tailor, or scratch to build your own list.</p>';$("czMain").innerHTML=html;return;}
+ var p=czPkg();
+ if(p){var ch=czChoicesFor(p.id);
+   if(ch.length){html+='<h3 class="cz-h">2 · A few questions</h3><p class="viewhint">Answer what you know — leave anything blank and Sharma will recommend in the quote. Panel capacity and sizing are always confirmed on site.</p>';ch.forEach(function(c){html+='<div class="choice-g"><p class="cl">'+c.label+'</p><div class="seg2">'+c.opts.map(function(o){return '<button type="button" data-choice="'+c.key+'" data-opt="'+esc(o)+'" class="'+(cz.choices[c.key]===o?"on":"")+'">'+o+"</button>"}).join("")+"</div></div>";});}
+   html+='<h3 class="cz-h">'+(ch.length?"3":"2")+' · Keep or remove items</h3><p class="viewhint">Tap a group to open it. Remove anything you don\'t want — you can restore it any time. If something is required for safety or code, Sharma will flag it in the quote.</p>';
+   var groups={};p.items.forEach(function(it){var g=czCatOf(it);(groups[g]=groups[g]||[]).push(it);});
+   Object.keys(groups).sort().forEach(function(g,gi){var items=groups[g],kept=items.filter(function(it){return !cz.removed[it]}).length;html+='<details class="acc" data-g="i'+g+'"'+(open["i"+g]||(!Object.keys(open).length&&gi===0)?" open":"")+'><summary>'+CATS[+g].name+'<span class="meta">'+kept+" of "+items.length+' kept</span></summary><div class="acc-body">'+items.map(function(it){var off=!!cz.removed[it];return '<div class="cz-item'+(off?" off":"")+'"><span>'+esc(it)+'</span><button type="button" class="cz-tog" data-cz-item="'+esc(it)+'">'+(off?"Restore":"Remove")+"</button></div>"}).join("")+"</div></details>";});
+ }
+ var stepNo=p?(czChoicesFor(p.id).length?4:3):2;
+ html+='<h3 class="cz-h">'+stepNo+' · Add extras</h3><p class="viewhint">Anything else from the full list, on top of your base.</p>';
+ CATS.forEach(function(c,ci){html+='<details class="acc" data-g="x'+ci+'"'+(open["x"+ci]?" open":"")+'><summary>'+c.name+'<span class="meta">'+c.items.length+' options</span></summary><div class="acc-body">'+c.items.map(function(it,ii){var k=ci+"-"+ii,on=!!state.adds[k];return '<div class="cz-xrow"><span>'+esc(it[0])+(on&&state.adds[k]>1?(" × "+state.adds[k]):"")+'</span><button type="button" class="add-btn'+(on?" added":"")+'" data-cz-add="'+k+'">'+(on?"✓ Added":"Add")+"</button></div>"}).join("")+"</div></details>";});
+ var cs=czSummary(),nAdds=Object.keys(state.adds).length;
+ html+='<div class="cz-sum"><b>'+(p?("Custom project — based on "+p.name):"Custom — built from scratch")+"</b><br/>"+(p?(cs.kept.length+" of "+p.items.length+" items kept"+(cs.removed.length?(" · Removed: "+cs.removed.length):"")+(cs.choices.length?(" · "+cs.choices.length+" answer"+(cs.choices.length>1?"s":"")+" given"):"")+"<br/>"):"")+(nAdds?nAdds+" extra option"+(nAdds>1?"s":"")+" added<br/>":"")+'When you\'re done, review and send it — Sharma checks your home, confirms capacity and sizing on site, and prices the whole list.</div><button class="btn btn-primary" type="button" id="czReview" style="width:100%">Review &amp; send my list →</button>';
+ $("czMain").innerHTML=html;
+ document.querySelectorAll("[data-choice]").forEach(function(b){b.addEventListener("click",function(){var k=b.getAttribute("data-choice"),o=b.getAttribute("data-opt");cz.choices[k]=(cz.choices[k]===o)?"":o;renderCz();renderSel();});});
+ document.querySelectorAll("[data-cz-item]").forEach(function(b){b.addEventListener("click",function(){var it=b.getAttribute("data-cz-item");if(cz.removed[it])delete cz.removed[it];else cz.removed[it]=1;renderCz();renderSel();});});
+ document.querySelectorAll("[data-cz-add]").forEach(function(b){b.addEventListener("click",function(){var k=b.getAttribute("data-cz-add");if(state.adds[k])delete state.adds[k];else state.adds[k]=1;renderCz();renderSel();renderProds();});});
+ $("czReview").addEventListener("click",openListSheet);
+ var _cny=window.scrollY||window.pageYOffset||0;if(Math.abs(_cny-_cy)>1){try{window.scrollTo({top:_cy,left:0,behavior:"instant"});}catch(e){window.scrollTo(0,_cy);}}
+}
+
+function gPkgsHTML(s){return '<p class="g-pkgs"><span class="g-pkgs-l">Applies to:</span> <span class="g-pill">'+esc(s)+"</span></p>";}
+$("guideList").innerHTML=GUIDE.map(function(g,ci){
+ var prods=g.cat>=0 ? CATS[g.cat].items.map(function(it){var img=prodImg(it[0]);var thumb=img?('<img class="g-thumb" src="'+img+'" alt="" loading="lazy"/>'):('<span class="g-thumb tile" aria-hidden="true">'+ICONS[g.cat]+'</span>');return '<div class="g-prow">'+thumb+'<div class="g-pt"><div class="g-pn">'+esc(it[0])+'</div><div class="g-pr">'+esc(it[1])+"</div></div></div>";}).join("") : "";
+ var a=GACC[ci%GACC.length];
+ var myths=g.myths?('<div style="margin-top:10px">'+g.myths.map(function(m){return '<div class="mf"><b>“'+esc(m[0])+'”</b><br/><span class="fact">'+esc(m[1])+"</span></div>"}).join("")+"</div>"):"";
+ return '<details class="g-card" style="--acc:'+a[0]+';--acc-l:'+a[1]+';--acc-ink:'+a[2]+'"'+(ci===0?" open":"")+'>'
+  +'<summary><div class="g-photo"><img src="'+g.img+'" alt="'+g.alt+'" loading="lazy"/>'
+  +'<span class="g-chip" aria-hidden="true">'+(g.cat>=0?ICONS[g.cat]:ICONS[0])+'</span>'
+  +'<span class="g-count">'+(g.cat>=0?CATS[g.cat].items.length+" items":"Electrical 101")+'</span>'
+  +'<div class="g-titles"><h3>'+g.title+'</h3><p>“'+g.scene+'”</p></div>'
+  +'<span class="g-chev" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M4 9l8 8 8-8"/></svg></span></div></summary>'
+  +'<div class="g-body"><p class="g-what">'+g.what+"</p>"
+  +(g.why.length?'<ul class="g-why">'+g.why.map(function(w){return "<li>"+w+"</li>"}).join("")+"</ul>":"")
+  +(g.callout?'<div class="g-callout">'+g.callout+"</div>":"")
+  +myths
+  +(prods?'<h3 class="g-sec">The parts, in plain English</h3>'+prods:"")
+  +gPkgsHTML(g.pkgs)
+  +'<div class="g-actions">'+(g.getq?'<button class="btn btn-primary" type="button" data-getq="'+g.getq+'">Get this quoted →</button>':"")+(g.cat>=0?'<button class="btn btn-navy" type="button" data-shop="'+g.cat+'">See these in Products</button>':"")+'<button class="btn btn-outline" type="button" data-gocz="1">Build my project</button></div>'
+  +"</div></details>";
+}).join("");
+document.querySelectorAll("#guideList .g-card").forEach(function(d){d.addEventListener("toggle",function(){if(d.open){var before=d.getBoundingClientRect().top;document.querySelectorAll("#guideList .g-card").forEach(function(o){if(o!==d&&o.open)o.open=false;});var delta=d.getBoundingClientRect().top-before;if(delta){try{window.scrollBy({top:delta,left:0,behavior:"instant"});}catch(e){window.scrollBy(0,delta);}}}});});
+document.querySelectorAll("[data-shop]").forEach(function(b){b.addEventListener("click",function(){showView("products");setCat(+b.getAttribute("data-shop"));});});
+document.querySelectorAll("[data-gocz]").forEach(function(b){b.addEventListener("click",function(){showView("customize");toast("Pick a package base, then make it yours");});});
+document.querySelectorAll("[data-getq]").forEach(function(b){b.addEventListener("click",function(){var id=b.getAttribute("data-getq");state.pkg=id;if(cz.base){cz.base="";cz.removed={};cz.choices={};renderCz();}renderSel();var p=PACKAGES.filter(function(x){return x.id===id})[0];toast("Added: "+(p?p.name:id)+" — tell Sharma about your shut-off in the notes");openListSheet();});});
+
+var DETAIL_SETS={
+ problem:{label:"What's happening?",help:"Pick the symptom that fits best — Sharma traces faults to the cause, not just the symptom.",opts:[
+  ["Dead outlet, switch or whole room — no power","Dead outlet or whole room"],
+  ["Breaker keeps tripping","Breaker keeps tripping"],
+  ["Lights flicker or dim when the AC or appliances start","Lights flicker or dim"],
+  ["Burning smell, buzzing, sparking or warm outlets","Burning smell / buzzing / sparking"],
+  ["Half the house or the whole house lost power","Half / whole house out"]]},
+ panel:{label:"What's going on with the panel?",help:"Panel problems usually show up as trips, no room to add circuits, or an old fuse box.",opts:[
+  ["Breakers trip when several things run together","Trips when things run together"],
+  ["Panel is full — no empty breaker spaces to add anything","Full — no spaces left"],
+  ["Fuse box or old panel — I know it needs replacing","Fuse box / old panel"],
+  ["Panel buzzes, feels warm, or breakers look worn","Buzzing / warm / worn"],
+  ["Not sure what is wrong with the panel — it just seems old","Not sure — it just seems old"]]},
+ add:{label:"What do you want to add?",help:"New big loads each need their own circuit — and a panel that can carry them.",opts:[
+  ["Level 2 EV charger in the garage","EV charger"],
+  ["Generator inlet and interlock for backup power","Generator backup"],
+  ["A big new load — hot tub, pool, workshop or second AC","Hot tub / pool / workshop / 2nd AC"],
+  ["A dedicated circuit for an appliance","Dedicated circuit for an appliance"],
+  ["Whole-home surge protection","Surge protection"],
+  ["Outlets & switches replaced or added","Outlets & switches"],
+  ["Not sure yet — I just know I need more power","Not sure — I need more power"]]},
+ lighting:{label:"What kind of lighting or fan work?",help:"Tell us the project — layout and the right boxes matter more than the fixture itself.",opts:[
+  ["Recessed LED lighting for a room","Recessed lighting"],
+  ["Pendant lights over an island or table","Pendants"],
+  ["Ceiling fan installed or replaced","Ceiling fan(s)"],
+  ["Dimmers or smart switches","Dimmers / smart switches"],
+  ["Outdoor or landscape lighting","Outdoor / landscape lighting"]]},
+ safety:{label:"What safety work matters most?",help:"These are the quiet protections — they only get noticed when they're missing.",opts:[
+  ["GFCI outlets in kitchen, baths, garage or outdoors","GFCI outlets"],
+  ["Smoke and CO detectors replaced or added","Smoke & CO detectors"],
+  ["Whole-home surge protection at the panel","Surge protection"],
+  ["Tamper-resistant outlets — young kids at home","Tamper-resistant outlets (kids)"],
+  ["All of it — a full safety check and upgrade","All of it — full safety upgrade"]]},
+ planning:{label:"What's the project?",help:"Big projects start at the panel — telling us the plan helps Sharma size it right the first time.",opts:[
+  ["Kitchen remodel","Kitchen remodel"],
+  ["New room or addition","Room / addition"],
+  ["Adding a big load — EV, hot tub, pool or workshop","Adding a big load"],
+  ["Whole-home renovation","Whole-home renovation"],
+  ["Still deciding — I want advice and a plan","Still deciding — want advice"]]}
+};
+var quizBranch="";
+function bindQuizGroup(group){
+ group.querySelectorAll("button").forEach(function(b){
+  if(b.getAttribute("data-bound"))return;b.setAttribute("data-bound","1");
+  b.addEventListener("click",function(){
+   group.querySelectorAll("button").forEach(function(x){x.classList.toggle("on",x===b)});
+   var key=group.getAttribute("data-q");
+   state.quiz[key]=b.getAttribute("data-val");
+   if(key==="reason"){var br=b.getAttribute("data-branch")||"";if(br!==quizBranch){quizBranch=br;renderDetailOpts(br);}}
+   quizUpdate();quizMaybeAdvance(key);
   });
-  function start(){
-    if(!window.SK||!SK.stack){ setTimeout(start, 50); return; }
-    if(SK.scheme&&document.getElementById("appearance")) SK.scheme.mountToggle(document.getElementById("appearance"));
-    var secs={}, hero=document.querySelector(".hero"), em=document.querySelector(".emergency"), foot=document.querySelector("footer");
-    VIEWS.forEach(function(k){ secs[k]=document.getElementById("view-"+k); if(secs[k]) secs[k].classList.add("on"); });
-    if(hero&&secs.packages) secs.packages.insertBefore(hero, secs.packages.firstChild);
-    var main=document.getElementById("app");
-    var stash=document.createElement("div"); stash.style.display="none";
-    VIEWS.forEach(function(k){ if(secs[k]) stash.appendChild(secs[k]); });
-    if(em) stash.appendChild(em); if(foot) stash.appendChild(foot);
-    document.body.appendChild(stash);
-    var nav=SK.stack("#app",{lead:LOGO,title:TITLE});
-    function build(k){ return function(page){
-      if(em) page.body.appendChild(em.cloneNode(true));
-      if(secs[k]) page.body.appendChild(secs[k]);
-      if(foot) page.body.appendChild(foot.cloneNode(true));
-      page.setHeader({title:TITLE, trail:TRAIL});
-    }; }
-    var cur="";
-    function doRoute(k){
-      if(VIEWS.indexOf(k)<0) k="packages";
-            if(k==="products"&&window.ensureProducts) ensureProducts(function(){ if(window.renderProds) renderProds(); });
-      if(k==="customize"&&window.ensureCustomize) ensureCustomize(function(){ if(window.renderCz) renderCz(); });
-      if(k==="learn"&&window.ensureLearn) ensureLearn();
-      if(k==="compare"&&window.ensureCompare) ensureCompare();
-      nav.root(k, build(k));
-      cur=k;
-      if(window.switchView) switchView(k);
-    }
-    window.__skRoute=function(n){
-      if(("#/"+n)!==location.hash){ try{ history.replaceState(null,"","#/"+n); }catch(e){} }
-      doRoute(n);
-    };
-    addEventListener("hashchange", function(){ doRoute((location.hash||"").replace(/^#\//,"")); });
-    doRoute((location.hash||"").replace(/^#\//,"")||"packages");
+ });
+}
+function renderDetailOpts(branch){
+ var set=DETAIL_SETS[branch];var box=$("detailOpts");if(!box)return;
+ if(!set){$("detailLabel").textContent="Tell us a little more";$("detailHelp").textContent="Pick the closest match — this list changes based on your answer to Question 1, so it stays relevant.";box.innerHTML='<span class="q-placeholder">↑ Pick Question 1 first — options appear here</span>';state.quiz.detail="";return;}
+ $("detailLabel").textContent=set.label;
+ $("detailHelp").textContent=set.help;
+ var prev=state.quiz.detail;
+ var stillThere=set.opts.some(function(o){return o[0]===prev});
+ if(!stillThere)state.quiz.detail="";
+ box.innerHTML=set.opts.map(function(o){return '<button type="button" data-val="'+esc(o[0])+'"'+(o[0]===state.quiz.detail?' class="on"':"")+">"+esc(o[1])+"</button>"}).join("");
+ bindQuizGroup(box);
+}
+document.querySelectorAll(".q-opts").forEach(bindQuizGroup);
+var STEPKEYS=[["reason"],["detail"],["location"],["panel","service"],["home","additions"],["timeline"]];
+var wiz={step:1,done:false};
+function stepComplete(n){return STEPKEYS[n-1].every(function(k){return !!state.quiz[k]})}
+function stepsDone(){var c=0;for(var i=1;i<=6;i++)if(stepComplete(i))c++;return c}
+function quizIsDanger(q){return /Burning smell/.test(q.detail)||/whole house lost power/.test(q.detail)}
+function showStep(){
+ document.querySelectorAll(".q-step").forEach(function(s){s.classList.toggle("on",!wiz.done&&+s.getAttribute("data-step")===wiz.step)});
+ var nav=$("qNav");if(nav)nav.style.display=wiz.done?"none":"flex";
+ var back=$("qBack");if(back)back.disabled=!(wiz.step>1||wiz.done);
+ if(back)back.textContent=wiz.done?"← Back to my answers":"← Back";
+ var next=$("qNext");if(next){next.disabled=!stepComplete(wiz.step);next.textContent=wiz.step===6?"See my match →":"Continue →";}
+ var fill=$("qpFill"),txt=$("qpText");
+ if(fill)fill.style.width=Math.round((wiz.done?6:stepsDone())/6*100)+"%";
+ if(txt)txt.textContent=wiz.done?"Done — here's your match":"Question "+wiz.step+" of 6";
+}
+$("qBack").addEventListener("click",function(){
+ if(wiz.done){wiz.done=false;wiz.step=6;var b=$("quizResult");b.classList.remove("show");b.innerHTML="";}
+ else if(wiz.step>1)wiz.step--;
+ showStep();
+});
+$("qNext").addEventListener("click",function(){
+ if(!stepComplete(wiz.step))return;
+ if(wiz.step<6){wiz.step++;showStep();}
+ else{wiz.done=true;showStep();renderQuizResult();}
+ var qz=$("quiz");if(qz)qz.scrollIntoView({block:"start",behavior:"smooth"});
+});
+function quizUpdate(){
+ var q=state.quiz;
+ var safety=$("quizSafety");
+ if(safety){
+   if(quizIsDanger(q)){
+     var wholeHouse=/whole house lost power/.test(q.detail);
+     safety.innerHTML=wholeHouse?"<b>Whole-home power loss — treat it as urgent.</b> If you see flames or smoke, get out and call <b>911 first</b>. A downed or damaged line outside is the power company's — stay well away from it and never touch it. Then call Sharma at <a href=\"tel:+14078819076\">407 881 9076</a>. You can still finish and send your list so we have the details.":"<b>Stop — treat this as urgent.</b> If you can do it without touching anything damaged, switch that circuit off at the breaker. Then call Sharma now at <a href=\"tel:+14078819076\">407 881 9076</a>. If you see flames or smoke, call <b>911 first</b>. You can still finish and send your list so we have the details.";
+     safety.classList.add("show");
+   } else{safety.innerHTML="";safety.classList.remove("show");}
+ }
+ showStep();
+}
+function quizMaybeAdvance(key){
+ var single=STEPKEYS[wiz.step-1].length===1&&STEPKEYS[wiz.step-1][0]===key;
+ if(single&&stepComplete(wiz.step)&&!wiz.done){
+   var at=wiz.step;
+   setTimeout(function(){
+     if(wiz.step!==at||wiz.done)return;
+     if(wiz.step<6){wiz.step++;showStep();}
+     else{wiz.done=true;showStep();renderQuizResult();}
+   },350);
+ }
+}
+function quizProds(id,q){
+ var out=[];
+ if(/EV charger/.test(q.detail))out=["3-0","3-1"];
+ else if(/Generator/.test(q.detail))out=["3-2","3-3"];
+ else if(/surge/.test(q.detail))out=["0-3"];
+ else if(/GFCI/.test(q.detail))out=["1-0"];
+ else if(/Smoke and CO/.test(q.detail))out=["1-2","1-3"];
+ else if(/Recessed/.test(q.detail))out=["2-0"];
+ else if(/Pendant/.test(q.detail))out=["2-1"];
+ else if(/Ceiling fan/.test(q.detail))out=["2-2","2-3"];
+ else if(/Dimmers/.test(q.detail))out=["2-4","5-0"];
+ else if(/Outdoor or landscape/.test(q.detail))out=["2-5"];
+ else if(/Outlets & switches/.test(q.detail))out=["5-0","5-2"];
+ else if(id==="panel")out=["0-0","0-3"];
+ else if(id==="safety")out=["1-0","1-2","0-3"];
+ else if(id==="lighting")out=["2-0","2-2"];
+ else if(id==="power")out=["3-0","3-2"];
+ else if(id==="repair")out=["4-0","4-1"];
+ if(/Overhead/.test(q.service)&&(id==="panel"||id==="repair")&&out.indexOf("0-5")<0)out.push("0-5");
+ var seen={},res=[];
+ out.forEach(function(k){if(!seen[k]&&res.length<3){seen[k]=1;res.push(k)}});
+ return res;
+}
+function renderQuizResult(){
+ var q=state.quiz;var box=$("quizResult");if(!box)return;
+ var s={panel:0,safety:0,lighting:0,power:0,repair:0};function add(id,n){s[id]+=n}
+ if(/is not working/.test(q.reason))add("repair",3);
+ else if(/Breakers keep tripping/.test(q.reason)){add("panel",3);add("repair",1)}
+ else if(/add something/.test(q.reason)){add("power",2);add("panel",1)}
+ else if(/lighting or ceiling fans/.test(q.reason))add("lighting",3);
+ else if(/safer/.test(q.reason))add("safety",3);
+ else if(/remodel/.test(q.reason)){add("panel",2);add("lighting",1);add("power",1)}
+ if(/Dead outlet/.test(q.detail))add("repair",3);
+ else if(/Breaker keeps tripping/.test(q.detail)){add("repair",2);add("panel",2)}
+ else if(/flicker/.test(q.detail)){add("repair",3);add("panel",1)}
+ else if(/Burning smell/.test(q.detail))add("repair",4);
+ else if(/whole house lost power/.test(q.detail)){add("repair",4);add("panel",1)}
+ else if(/run together/.test(q.detail)){add("panel",3);add("repair",1)}
+ else if(/Panel is full/.test(q.detail))add("panel",3);
+ else if(/Fuse box or old panel/.test(q.detail))add("panel",3);
+ else if(/buzzes/.test(q.detail)){add("repair",3);add("panel",1)}
+ else if(/just seems old/.test(q.detail))add("panel",2);
+ else if(/EV charger/.test(q.detail))add("power",3);
+ else if(/Generator inlet/.test(q.detail))add("power",3);
+ else if(/big new load/.test(q.detail)){add("power",2);add("panel",2)}
+ else if(/dedicated circuit/.test(q.detail)){add("power",2);add("panel",1)}
+ else if(/more power/.test(q.detail)){add("panel",2);add("power",1)}
+ else if(/Whole-home surge/.test(q.detail))add("safety",3);
+ else if(/Outlets & switches/.test(q.detail)){add("safety",1);add("lighting",2)}
+ else if(/Recessed/.test(q.detail))add("lighting",3);
+ else if(/Pendant/.test(q.detail))add("lighting",3);
+ else if(/Ceiling fan/.test(q.detail))add("lighting",3);
+ else if(/Dimmers/.test(q.detail))add("lighting",3);
+ else if(/Outdoor or landscape/.test(q.detail))add("lighting",3);
+ else if(/GFCI outlets/.test(q.detail))add("safety",3);
+ else if(/Smoke and CO/.test(q.detail))add("safety",3);
+ else if(/Tamper-resistant/.test(q.detail))add("safety",3);
+ else if(/full safety/.test(q.detail))add("safety",3);
+ else if(/Kitchen remodel/.test(q.detail)){add("lighting",2);add("panel",1);add("safety",1)}
+ else if(/New room/.test(q.detail)){add("panel",2);add("lighting",1)}
+ else if(/Adding a big load/.test(q.detail)){add("power",2);add("panel",2)}
+ else if(/Whole-home renovation/.test(q.detail)){add("panel",2);add("lighting",1);add("safety",1)}
+ else if(/Still deciding/.test(q.detail))add("panel",1);
+ if(/^Kitchen$/.test(q.location)||/Bathroom/.test(q.location))add("safety",1);
+ else if(/Garage/.test(q.location))add("power",1);
+ else if(/Outdoors/.test(q.location)){add("power",1);add("safety",1)}
+ else if(/At the panel/.test(q.location))add("panel",1);
+ else if(/Several places/.test(q.location)){add("panel",1);add("safety",1)}
+ else if(/Living areas/.test(q.location))add("lighting",1);
+ if(/Fuse box or 100A/.test(q.panel))add("panel",2);
+ else if(/^150A/.test(q.panel))add("panel",1);
+ else if(/but full/.test(q.panel))add("panel",2);
+ else if(/breakers trip or it looks worn/.test(q.panel)){add("panel",1);add("repair",1)}
+ if(/Overhead/.test(q.service))add("panel",1);
+ if(/before 1990/.test(q.home)){add("panel",2);add("safety",1)}
+ else if(/1990 to 2010/.test(q.home))add("safety",1);
+ if(/hot tub or pool/.test(q.additions)){add("power",2);add("panel",2)}
+ else if(/EV charger/.test(q.additions)){add("power",2);add("panel",1)}
+ else if(/new AC/.test(q.additions))add("panel",2);
+ else if(/home addition/.test(q.additions)){add("panel",2);add("lighting",1)}
+ if(/Emergency/.test(q.timeline)&&(/is not working/.test(q.reason)||quizIsDanger(q)))add("repair",2);
+ if(quizIsDanger(q)&&s.repair<s.panel)add("repair",s.panel-s.repair+1);
+ var ranked=Object.keys(s).sort(function(a,b){return s[b]-s[a]});
+ var id=ranked[0],secondId=ranked[1];
+ var p=PACKAGES.filter(function(x){return x.id===id})[0];
+ var p2=PACKAGES.filter(function(x){return x.id===secondId})[0];
+ var descs={
+  "panel":"A new Siemens 200A panel with new breakers throughout, GFCI protection for the range and dryer, surge protection at the panel, and every circuit labeled. Sharma confirms your capacity and sizing on site — and if your home needs the 400A service instead, you'll hear it there, with the price.",
+  "safety":"GFCI outlets where water meets power, tamper-resistant outlets for the living areas, hardwired interconnected smoke and CO detectors, and whole-home surge protection at the panel — the protection a modern Florida home should have, in one visit.",
+  "lighting":"Recessed LED laid out for the room, pendants over the island, ceiling fans hung on fan-rated boxes, dimmers and smart switches, and outdoor lighting on a timer. Tell Sharma the rooms in your notes and the layout is designed at the quote visit.",
+  "power":"A dedicated 240V / 50A circuit for Level 2 EV charging (14-50 outlet or hardwired), a 50A generator inlet and panel interlock so a portable generator connects safely, and dedicated circuits for other big loads. Sharma checks your panel capacity on site first — and includes a panel upgrade in the price if you need one.",
+  "repair":"A troubleshooting visit that finds the actual cause — dead circuits traced, tripping breakers explained, flickers and smells made safe first — then fixes it. Add what's happening in your notes when you send your list, so Sharma comes prepared."
+ };
+ var why1="Because you came for <b>"+esc(q.reason.toLowerCase())+"</b> — specifically <b>"+esc(q.detail.toLowerCase())+"</b> — this is the package built for exactly that.";
+ var reasons=[];
+ if(/^Kitchen$/.test(q.location)||/Bathroom/.test(q.location))reasons.push("It's in the <b>kitchen or bathroom</b>, where water and power meet — protection and correct circuits matter most there.");
+ else if(/Garage/.test(q.location))reasons.push("It's in the <b>garage</b> — where EV chargers, generator inlets and workshop circuits live.");
+ else if(/Outdoors/.test(q.location))reasons.push("It's <b>outdoors</b> — where weather, GFCI protection and landscape lighting come in.");
+ else if(/At the panel/.test(q.location))reasons.push("It's <b>at the panel itself</b> — which is where this package starts.");
+ else if(/Several places/.test(q.location))reasons.push("It affects <b>several places or the whole home</b>, which usually points back to the panel or service, not a single device.");
+ else if(/Living areas/.test(q.location))reasons.push("It's in the <b>living areas or bedrooms</b> — the rooms where lighting, fans and everyday outlets get used most.");
+ if(/Fuse box or 100A/.test(q.panel))reasons.push("Your panel is a <b>fuse box or 100A</b> — built for a house with a fraction of today's loads, so capacity is part of the answer.");
+ else if(/^150A/.test(q.panel))reasons.push("Your panel is <b>150A</b> — workable for a lot of homes, but Sharma will confirm it covers what you're adding.");
+ else if(/but full/.test(q.panel))reasons.push("Your panel is <b>full, with no empty spaces</b> — anything new needs room first.");
+ else if(/breakers trip or it looks worn/.test(q.panel))reasons.push("Your <b>200A panel trips or looks worn</b> — Sharma will test it in person before recommending repair or replacement.");
+ else if(/Newer 200A/.test(q.panel))reasons.push("Good news: your <b>newer 200A panel has space left</b>, so this probably doesn't need a panel upgrade — Sharma confirms on site.");
+ else if(/Not sure/.test(q.panel))reasons.push("You weren't sure about your panel — that's fine. <b>Sharma checks it in person</b> at the quote visit; no guessing from photos.");
+ if(/Overhead/.test(q.service)&&(id==="panel"||id==="repair"))reasons.push("Your power arrives <b>overhead, from a pole to a mast</b>. For panel or service work, <b>Sharma coordinates with the power company for you</b> — scheduling the disconnect and reconnect, sequencing the mast and service-drop work in the right order, and lining up the permit and inspection — so you never chase the utility yourself.");
+ else if(/Underground/.test(q.service)&&(id==="panel"||id==="repair"))reasons.push("Your service is <b>underground</b> — no mast or overhead drop to worry about; panel work still gets permitted and inspected by Sharma.");
+ if(/before 1990/.test(q.home))reasons.push("Your home was <b>built before 1990</b>, so panel size, wiring and detectors all deserve a fresh look.");
+ if(/hot tub or pool/.test(q.additions))reasons.push("You've <b>added or are adding a hot tub or pool</b> — that's real new demand the panel has to carry safely.");
+ else if(/EV charger/.test(q.additions))reasons.push("An <b>EV charger is recent or coming</b> — a 50A load the panel has to have room for.");
+ else if(/new AC/.test(q.additions))reasons.push("A <b>new AC is recent or coming</b> — big loads like that start with panel capacity.");
+ else if(/home addition/.test(q.additions))reasons.push("A <b>home addition is recent or coming</b> — new rooms mean new circuits, and the panel has to feed them.");
+ if(/Emergency/.test(q.timeline))reasons.push("You marked this <b>emergency — today</b> — Sharma will treat it as urgent when your list arrives.");
+ else if(/This week/.test(q.timeline))reasons.push("You'd like this handled <b>this week</b> — noted, and it travels with your list.");
+ else if(/month or two/.test(q.timeline))reasons.push("Your timing is the <b>next month or two</b> — comfortable room to plan it properly.");
+ else if(/planning and pricing/.test(q.timeline))reasons.push("You're <b>just planning and pricing</b> — no rush; this match is the right starting point.");
+ var warn=quizIsDanger(q)?'<p class="warn"><b>One more time, because it matters:</b> burning smells, buzzing, sparking or a whole home out are not wait-and-see problems. Call Sharma at <a href="tel:+14078819076">407 881 9076</a> now — and 911 first if you see flames or smoke.</p>':"";
+ var prods=quizProds(id,q);
+ var prodsHTML=prods.length?'<div class="quiz-prods"><p style="margin-bottom:6px"><b>Products that fit your answers:</b></p>'+prods.map(function(k){var on=!!state.adds[k];return '<div class="qp-item"><span>'+esc(prodName(k))+'</span><button type="button" class="add-btn'+(on?" added":"")+'" data-qprod="'+k+'">'+(on?"✓ Added":"Add")+"</button></div>"}).join("")+"</div>":"";
+ var also=(p2&&s[secondId]>=3&&s[secondId]>=s[id]-2)?'<div class="quiz-also"><b>Also worth a look: '+p2.name+'</b><p>'+descs[secondId]+'</p><button class="btn btn-outline" type="button" id="quizAlso">See what\'s in it →</button></div>':"";
+ box.innerHTML=warn+'<h3>Your match: '+p.name+'</h3><p>'+why1+'</p><p>'+descs[id]+'</p><p style="margin-bottom:6px"><b>Why this match, in your answers:</b></p><ul class="quiz-reasons">'+reasons.map(function(r){return "<li>"+r+"</li>"}).join("")+"</ul>"+prodsHTML+also+'<button class="btn btn-primary" type="button" id="quizGo" style="width:100%;font-size:16px">Add this package &amp; send my picks →</button><p style="margin-top:8px;font-size:13.5px">All your questionnaire answers are included when you send your list, so Sharma already knows the story before the call.</p>';
+ box.classList.add("show");
+ $("quizGo").addEventListener("click",function(){state.pkg=p.id;if(cz.base){cz.base="";cz.removed={};cz.choices={};renderCz();}renderSel();openListSheet();});
+ var qa=$("quizAlso");if(qa)qa.addEventListener("click",function(){openPkgSheet(secondId);});
+ document.querySelectorAll("[data-qprod]").forEach(function(b){b.addEventListener("click",function(){var k=b.getAttribute("data-qprod");if(state.adds[k])delete state.adds[k];else state.adds[k]=1;renderSel();renderProds();renderQuizResult();toast(state.adds[k]?("Added: "+prodName(k)):"Removed");});});
+}
+showStep();
+
+renderPkgs();renderCz();renderProds();renderSel();
+</script>
+<nav class="sk-tabbar" aria-label="Sections"><div class="sk-tabbar__inner"><a class="sk-tab" href="#" data-sk-view="packages"><svg class="sk-icon"><use href="#i-home"/></svg>Packages</a><a class="sk-tab" href="#" data-sk-view="products"><svg class="sk-icon"><use href="#i-list"/></svg>Products</a><a class="sk-tab" href="#" data-sk-view="customize"><svg class="sk-icon"><use href="#i-edit"/></svg>Customize</a><a class="sk-tab" href="#" data-sk-view="learn"><svg class="sk-icon"><use href="#i-doc"/></svg>Learn</a><a class="sk-tab" href="#" data-sk-view="compare"><svg class="sk-icon"><use href="#i-chart"/></svg>Compare</a></div></nav>
+<script>
+/* Sharma kit v1.2 adapter: service worker + bottom tab bar wired to this app's
+   existing tab buttons. No data, links or behaviour change. */
+(function(){
+  function reg(){ if (window.SK && SK.registerSW) { try { SK.registerSW("sw.js"); } catch(e){} } }
+  if (document.readyState === "complete") reg(); else addEventListener("load", reg);
+  var tabs = document.querySelectorAll(".sk-tab[data-sk-view]");
+  if (!tabs.length) return;
+  function sync(){
+    var on = document.querySelector('[data-view].on, [data-view][aria-selected="true"]');
+    tabs.forEach(function(t){ 
+      if (on && t.getAttribute("data-sk-view") === on.getAttribute("data-view")) t.setAttribute("aria-current","page");
+      else t.removeAttribute("aria-current");
+    });
   }
-  if(document.readyState==="loading") document.addEventListener("DOMContentLoaded", start); else start();
+  tabs.forEach(function(t){
+    t.addEventListener("click", function(e){
+      e.preventDefault();
+      var b = document.querySelector('[data-view="' + t.getAttribute("data-sk-view") + '"]');
+      if (b) b.click();
+      sync(); scrollTo(0,0);
+    });
+  });
+  document.addEventListener("click", function(){ setTimeout(sync, 30); });
+  sync();
 })();
 </script>
 </body>
